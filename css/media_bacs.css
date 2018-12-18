@@ -1,0 +1,107 @@
+@media screen and (max-width:1440px) {
+ol>li>ol, ol>li>ul, ul>li>ol, ul>li>ul{ margin-top: 0;}
+.nav > li.active >a.acv{height: 46px;}
+.nav > li >a{	height: 30px;	line-height: 26px;}
+.nav > li >a.acv{	height: 46px;	padding: 10px 15px 10px 15px;	border-left: 4px solid #20344b;}
+
+.nav-header{padding: 20px 10px;padding-top: 15px;}
+.logo_box{margin-bottom: 20px;}
+.logo{width: 60px;}
+.navbar-static-side{	width: 180px;}
+#page-wrapper{	margin: 0 0 0 180px;}
+
+.niubi{margin-bottom: 10px;}
+.niubi img{ width: 50px; height: 50px;}
+.dropdown-menu{top: 125px;left: 58px;}
+
+.nav-header .text-muted{font-size: 14px;}
+.font-bold{font-weight: normal;}
+
+body.mini-navbar .navbar-default .nav > li > .nav-second-level li a{
+	padding: 0;
+	line-height: 40px;
+}
+
+.nav-second-level li a{    padding-left: 40px;}
+.searchBox .form-group .form-control,.SetCon .form-group .form-control{
+    width:100px;
+    padding-left: 5px;
+}
+.top_input input{ width: 150px; padding:3px 10px;}
+.top_input .scms{ width: 180px;}
+.top_top .top_input input{ width: 150px; padding:3px 10px; height: 27px;}
+/*********************************/
+.webtop_head{height:40px; background:#f4f5f7; border-bottom:1px solid #eee;}
+.webtop_Navigation{ line-height:30px; color:#849097; font-size:12px; background:#fff;}
+.webtop_Navigation span{ font-family:"宋体"}
+.webtop_Navigation span.active{ color:#254769; font-family:"微软雅黑"}
+
+.top_left_title{ float:left; line-height:40px; font-size:14px; color:#254769; padding-right:15px;font-weight:bold;}
+.top_left_title img{ width: 14px; height: 14px;}
+
+.top_right_div{ float:right; padding-top:6px; width:305px;}
+.top_right_div a{width:22px; height:22px; position:relative; margin-right:15px; cursor:pointer; background-size: 94px 22px;}
+.top_right_div a div{ position:absolute; right:0px; top:0px; height:10px; width:10px; background:#ff0000; border-radius:50%;}
+
+.top_right_div a.top_nav_2{ background-position:-37px 0;}
+.top_right_div a.top_nav_3{ background-position:-72px 0;}
+
+.top_right_div .top_time{ width:120px; margin-top: 2px; margin-right:10px; border:1px solid #A5AFB3; color:#A5AFB3;border-radius:3px; line-height:22px; text-align:center; float:left; font-size:12px;}
+
+.top_right_div .top_tianqi{ width:60px; margin-top: 3px; height:22px;float:right; position:relative; background:#198FD2; color:#fff;border-radius:2px; line-height:22px; font-size:12px; cursor:pointer;}
+.top_right_div .top_tianqi .jtimg{ float:left; margin-left:5px;  width:20px; margin-right:5px;}
+
+.top_popdiv{ width:470px; height:161px; position:absolute; right:0px; top:22px; display:none}
+.top_popdiv .popsj{ float:right; margin-right:34px; height:11px; background:url(../img/top_sj.png) right top no-repeat; width:16px;}
+.top_popdiv .top_poplist{ width:470px; height:150px; background:#fff;border-radius:5px; float:right;}
+.top_popdiv .top_poplist ul{ float:left; width:25%; padding-top:20px;}
+.top_popdiv .top_poplist ul li{ float:left; width:100%; text-align:center; line-height:30px; color:#444; font-size:12px;}
+.top_popdiv .top_poplist ul li.title{ font-size:16px;}
+.top_popdiv .top_poplist ul li.img{ line-height:0px; height:40px;}
+
+.top_right_div .top_tianqi:hover .top_popdiv{ display:block;}
+
+.mt20{ margin-top: 10px;}
+.form-control{ height: 27px; line-height: 27px; padding: 0px; padding-left: 5px; font-size: 12px;}
+.searchBox .form-group label{ font-size: 12px;}
+.form_group_btn .bnt01, .add_btn.bnt01{ line-height: 27px; font-size: 12px;}
+.tubiao_btn{ height: 27px; line-height: 27px; margin-top: 10px;}
+.searchBox .form-group{ height: 35px;}
+.roomBudTop{ line-height:35px;min-height: 49px;}
+.searchBox{ line-height: 35px;}
+
+
+.top_bt{ line-height: 27px;}
+.compareYear a{ line-height: 25px;}
+.tubiao_box{ height: 47px;}
+.news_seach_box{ min-height: 47px;}
+.top_right{ line-height: 27px;}
+#Hotel_screening img{ height: 14px;}
+.top_top{ padding: 8px 12px;}
+.bot_ul li{padding:1px 10px;}
+.schedule_box{ width: 280px}
+
+.conBox{ padding: 5px 10px 10px 10px;}
+
+.pagesbox .lettspan .pages_dq{ width: 35px;}
+
+.echartsbox{ height: 400px;}
+.lastech{ height: 380px;}
+.switchTab span, .threshold span{width: 120px;}
+
+.completEcharts{ padding: 0 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

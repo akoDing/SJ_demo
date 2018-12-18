@@ -1,0 +1,51 @@
+/* CSS Document */
+*{ margin:0px; padding:0px;}
+ul,li{ list-style-type:none}
+.content{ width:100%; float:left}
+.content h2{
+  width:100%; 
+  float:left;
+  border-bottom:1px dashed #ddd; 
+  font-size:18px;
+  color:#266cab;
+  font-weight:bold;
+  padding:10px 0;
+}
+.textbox{ float:left;width:100%;}
+.textbox p{
+  line-height:34px;
+  font-size:18px;
+  color:#77838d;
+}
+.slide{display:none; width:290px; position:fixed;right:45px;bottom:100px; height:645px; padding-top:30px;}
+
+.slide_textbox{ width:290px; height:570px; float:left}
+.slide_textbox ul{ width:290px; height:620px; background:url(img/slide_x.jpg) left top no-repeat;overflow-x:hidden;overflow-y:auto;}
+.slide_textbox ul.hide{ display:none}
+.slide_textbox ul li{ width:290px; line-height:40px; margin-left:30px; float:left; position:relative; cursor:pointer;}
+.slide_textbox ul li a{ padding-left:20px; font-size:14px; color:#B5B5B5; text-decoration:none}
+.slide_textbox ul li.title a{ font-size:20px; color:#3C434D; font-weight:bold;}
+
+.slide_textbox ul li .slideDian{ position:absolute; height:13px; width:13px; background:url(img/slide_link_dian.jpg) no-repeat; left:-30px; top:13px}
+.slide_textbox ul li.active{ background:url(img/ddd_03.png) no-repeat left center;color:#fff;}
+.slide_textbox ul li.active a{
+  color:#fff
+}
+.slide_textbox ul li.active .slideDian{background:url(img/slide_hover_dian.jpg) no-repeat;}
+
+
+.slide_button{ float:left; padding-top:50px;}
+.slide_button img{ cursor:pointer; height:45px; float:left; margin-right:10px}
+
+
+
+
+
+
+
+
+
+
+
+
+

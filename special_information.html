@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.jq22.com/demo/web20160509/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2016 07:41:49 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>闵行区人大</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+  
+	<link href="css/bootstrap-select.min.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+  
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+  <link href="http://at.alicdn.com/t/font_684601_z2tyakglw1b.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.min.css" />
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bacs.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet" />
+    <link href="css/css1.css" rel="stylesheet" />
+    <style>
+      @media only screen and (min-width: 641px){
+        .am-modal {
+          width: 800px;
+          margin-left: -375px;
+        }
+      }
+        
+    </style>
+
+</head>
+
+<body class="pace-done">
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+    			<script src="left.js"></script>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+			<div class="webtop_head">
+				<script src="head.js"></script>
+			</div>
+			<div class="webnavhover">
+				 <span  class="active_top">审查监督 <i class="iconfont icon-icon_colse_b "></i></span>
+				 <span class="active">政府性债务<i class="iconfont icon-icon_colse_b "></i></span>
+			</div>
+			<div class="mainInforbox">
+				<div class="websearchbox b_b_x">
+					<div class="websearchbox_li">
+						<span>年份：</span>
+						<label>
+						    <input class="form-control dateimg"  type="text" id="listdata_year" placeholder="请选择">
+
+						</label>
+					</div>
+					<div class="websearchbox_li no">
+						<span class="fl">资金性质：</span>
+						<select style="margin-right: 20px;">
+	<option>区本级</option>
+						
+  <option>虹桥</option>
+  <option>梅陇</option>
+  <option>七宝</option>
+  <option>莘庄</option>
+  <option>颛桥</option>
+  <option>马桥</option>
+ <option> 吴泾</option>
+  <option>浦江</option>
+  	 <option>莘庄工业区</option>
+
+						</select>
+						
+					</div>
+					<div class="search_an">查询</div>
+				</div>
+				<div class="top_bottom b_b_x">
+	                <span class="bot_p fs16 fwb">已选条件</span>
+	                <ul class="bot_ul clearfix">
+	                  <!--<li>上海市 <i class="iconfont icon-icon_colse_b guanbi"></i></li>
+	                  <li>浦东新区 <i class="iconfont icon-icon_colse_b guanbi"></i></li>-->
+	                </ul>
+	                <div class="qingchu"><i class="iconfont icon-lajitong"></i> 清除全部</div>
+	            </div>
+	            <div class="top_bottom b_b_x">
+	                <span class="bot_p fs16 fwb">已隐藏操作列</span>
+	                <ul class="bot_ul clearfix" id="yincanliebiao">
+	                </ul>
+	                <div class="qingchu2"><i class="iconfont icon-lajitong"></i> 清除全部</div>
+	            </div>
+	            <div class="sup_infor_title fs26">闵行区政府性债务余额汇总表
+	            	<i class="iconfont icon-triangle-down"></i>
+	            	<!--<i class="iconfont icon-2"></i>-->
+	            
+		            <div class="sup_danwei_pop">
+		            	<span class="active">单位：万元</span>
+		            	<span>单位：%</span>
+		            </div>
+	            </div>
+	       <div class="boxtable_up active">
+				<div class="mainlistnav">
+					<ul class="main_nav_left">
+						<li class="tableNav active"><i class="iconfont icon-shuju"></i>数据</li>
+						<li class="tableNav"><i class="iconfont icon-shujushixin"></i>结构</li>
+						
+						<li class="tubiao tubiao_li active" data-id='0'><i class="iconfont icon-table"></i>表</li>
+						<li class="tubiao_li" data-id='1'><i class="iconfont icon-shuju1"></i>图</li>
+						
+					</ul>
+					
+					<ul class="main_nav_right">
+						
+						<li  id="woyaotiwen"><i class="iconfont icon-shenhebijijishibenxiezi"></i><span>我要提问</span></li>
+					</ul>
+				</div>
+				<div class="yijianxuanze_box fs16">
+					<i class="iconfont icon-zhuyi"></i> 提示：请点击问题数据
+					<span class="shou anniu" id="wanchbiaoji">完成选择</span>
+				</div>
+				<div class="clearbox"></div>
+				
+				<div class="mainlist_table">
+					<table width="100%" class="mainlist_table_table">
+  <tr>
+    <td rowspan="2" width="200" class="table_duijiaoxian" >
+    	
+										<b>项目</b>
+										
+										<em>科目</em>	</td>
+	<th rowspan="2" width="200" class="table_duijiaoxian" >2018年6月<br>
+    合计 </th>									
+    <th colspan="3">其中：偿还责任债务（一类债务）</th>
+    <th colspan="2">其中：或有债务</th>
+  </tr>
+    <tr>
+    <th width="146" class="table_th">小计</th>
+	<th width="226" class="table_th">已置换成政府债券部分</th>
+    <th width="312" class="table_th">未置换成政府债券部分</th>
+	<th width="199" class="table_th">担保责任债务     （二类债务）</th>
+	<th width="307" class="table_th">救助责任债务    （三类债务）</th>
+  </tr>
+   <tr>
+    <td>全区</td>
+    <td class='caiwu_num'>323.00</td>
+	  <td class='caiwu_num'>323.00</td>
+    <td class='caiwu_num'>434.00</td>
+    <td class='caiwu_num'>323.00</td>
+    <td class='caiwu_num'>434.00</td>
+    <td class='caiwu_num'>323.00</td>
+  </tr>
+  <tr>
+    <td>其中：区本级</td>
+    <td class='caiwu_num'>342.00</td>
+	   <td class='caiwu_num'>342.00</td>
+    <td class='caiwu_num'>546.00</td>
+    <td class='caiwu_num'>342.00</td>
+    <td class='caiwu_num'>546.00</td>
+    <td class='caiwu_num'>342.00</td>
+  </tr>
+  <tr>
+    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;镇级</td>
+    <td class='caiwu_num'>454.00</td>
+    <td class='caiwu_num'>423.00</td>
+    <td class='caiwu_num'>454.00</td>
+    <td class='caiwu_num'>423.00</td>
+	    <td class='caiwu_num'>423.00</td>
+    <td class='caiwu_num'>454.00</td>
+  </tr>
+  
+</table>
+
+					
+					
+				</div>
+				<div class="mainlist_table displayno">
+<table width="100%" class="mainlist_table_table">
+  <tr>
+    <td rowspan="2" width="200" class="table_duijiaoxian" >
+    	
+										<b>项目</b>
+										
+										<em>科目</em>	</td>
+	<th rowspan="2" width="200" class="table_duijiaoxian" >2018年6月<br>
+    合计 </th>									
+    <th colspan="3">其中：偿还责任债务（一类债务）</th>
+    <th colspan="2">其中：或有债务</th>
+  </tr>
+    <tr>
+    <th width="146" class="table_th">小计</th>
+	<th width="226" class="table_th">已置换成政府债券部分</th>
+    <th width="312" class="table_th">未置换成政府债券部分</th>
+	<th width="199" class="table_th">担保责任债务     （二类债务）</th>
+	<th width="307" class="table_th">救助责任债务    （三类债务）</th>
+  </tr>
+   <tr>
+    <td>全区</td>
+    <td class='caiwu_num'>323.00</td>
+	  <td class='caiwu_num'>323.00</td>
+    <td class='caiwu_num'>434.00</td>
+    <td class='caiwu_num'>323.00</td>
+    <td class='caiwu_num'>434.00</td>
+    <td class='caiwu_num'>323.00</td>
+  </tr>
+  <tr>
+    <td>其中：区本级</td>
+    <td class='caiwu_num'>342.00</td>
+	   <td class='caiwu_num'>342.00</td>
+    <td class='caiwu_num'>546.00</td>
+    <td class='caiwu_num'>342.00</td>
+    <td class='caiwu_num'>546.00</td>
+    <td class='caiwu_num'>342.00</td>
+  </tr>
+  <tr>
+    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;镇级</td>
+    <td class='caiwu_num'>454.00</td>
+    <td class='caiwu_num'>423.00</td>
+    <td class='caiwu_num'>454.00</td>
+    <td class='caiwu_num'>423.00</td>
+	    <td class='caiwu_num'>423.00</td>
+    <td class='caiwu_num'>454.00</td>
+  </tr>
+  
+</table>
+				</div>
+
+			
+				<!--ech  div1-->
+			<div class="mainlist_table displayno">
+					<div class="mainlist_table_echbox">
+						<div class="echbox_title_nav">
+							<span class="active fs16">收入</span>
+							<span class="fs16">支出</span>
+						</div>
+						<div class="echbox_inforbox" id="echbox_inforbox_1">
+							
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<!--ech   div2-->
+			<div class="mainlist_table displayno">
+					<div class="mainlist_table_echbox pt0">
+						<div class="echbox_title_nav">
+							<a class="fs16">2014年决算比较上年</a>
+							<a class="fs16 active">2015年决算比较上年</a>
+							<a class="fs16">2016年决算比较上年</a>
+							<a class="fs16">2017年决算比较上年</a>
+							<a class="fs16">2018年决算比较上年</a>
+						</div>
+						<div class="echbox_inforbox_tow"   id="echbox_inforbox_2">
+							<div class="hfdiv" id="echbox_inforbox_2_1"></div>
+							
+							<div  class="hfdiv" id="echbox_inforbox_2_2"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+		
+	       </div>
+	        <div class="boxtable_up ">
+	        		<div class="boxtabletext fs16">
+	        		&nbsp; &nbsp; &nbsp; &nbsp;“地方政府性债务”是指地方政府负有偿还责任债务以及或有债务总称，既包括地方政府必须偿还、有偿还义务的地方政府债务（不同于地方政府性债务），还包括地方政府违规担保形成的或者有一定救助责任的或有债务。
+<br /><br />
+<b>相关政策文件：</b><br />
+<a href="regulations_infor-43.html">1、国务院《关于加强地方政府性债务管理的意见》（国发[2014]43号）</a><br />
+<a href="regulations_infor-34.html">2、财政部《关于做好2018年地方政府债务管理工作的通知》（财预〔2018〕34号）</a><br />
+<a href="regulations_infor-155.html">3、财政部《关于印发<地方政府专项债务预算管理办法>的通知》（财预〔2016〕155号）</a><br />
+<a href="regulations_infor-154.html">4、财政部《关于印发<地方政府一般债务预算管理办法>的通知》（财预〔2016〕154号）</a><br />
+<a href="regulations_infor-255.html">5、财政部《关于对地方政府债务实行限额管理的实施意见》（财预〔2015〕255号）</a><br /><br /><br /><br /><br /><br /><br /><br />	
+	        		
+	        		
+	        		
+	        		
+	        		
+	        		
+	        		</div>
+	        	
+	        </div>	
+	     </div>
+         
+          
+      </div>
+    </div>
+    <!-- 弹出层 -->
+	<div class="webpopbg"></div>
+	<div class="my_aq_popbox" >
+		<div class="my_aq_popbox_title">
+			<span class="white fs18">我要提问</span> 
+			<i class="iconfont icon-guanbi" id="mydq_close"></i>
+		</div>
+		<div class="my_aq_inputbox">
+			<ul>
+				<li><div class="my_aq_biaoji fs18" datamy-bj='1' title="点击选择具体数据"><i class="iconfont icon-wuxing"></i> 选择具体数据</div></li>
+				<li><span class="title fs16">提出人：</span><input type="text" name="" class="myaq_input" /></li>
+				<li><span class="title fs16">提出时间：</span><input type="text" name="" class="myaq_input" /></li>
+				<li class="popradio"><span class="title fs16">类型：</span>
+					<label class="fs16"><i class="iconfont icon-radio active"></i>意见</label>
+					<label class="fs16"><i class="iconfont icon-radio"></i>建议</label>
+					<label class="fs16"><i class="iconfont icon-radio"></i>问题</label>
+					
+				</li>
+				<li  class="popradio"><span class="title fs16">发布类型：</span>
+					<label class="fs16"><i class="iconfont icon-radio"></i>公开</label>
+					<label class="fs16"><i class="iconfont icon-radio"></i>秘密</label>
+				</li>
+				
+				<li class="popradio"><span class="title fs16">答复单位：</span>
+					<select name="select" class="myaq_input" >
+							<option value="">请选择</option>
+							
+       				    </select>
+					</li>
+				<li><span class="title fs16">附件：</span><input type="text" name="" class="myaq_input" /> <img class="myaq_up" src="img/my_aq_up.jpg" /></li>
+				<li><span class="title fs16">具体内容：</span><textarea name="textarea" class="my_eq_text"></textarea></li>
+				<li><span class="title fs16">&nbsp;</span>
+					<button class="submit_my_aq fs16">提交</button>
+					<button class="baocun_my_aq fs16">保存</button>
+				</li>
+			</ul>
+
+
+
+
+
+
+			
+		</div>
+		
+		
+	</div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!--范围-->
+    <script type="text/javascript" src="js/ion.rangeSlider.js"></script> 
+    
+   <script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/web.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/news.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<script>
+		$(function(){
+			//搜索
+			
+			$(".search_an").click(function(){
+				num = 0
+				
+				$(".xuanzes").each(function(i){
+					if($(this).hasClass("active")){
+						num+=1;
+						
+					}
+					
+				})
+				if(num<1){
+					alert('最少要选择一个查询条件');
+					return false;
+				}
+				$(".search_list_1,.search_list_2,.search_list_3").hide();
+				$(".xuanzes").each(function(i){
+					if($(this).hasClass("active")){
+						
+						dataid=$(this).attr('data-id');
+						$(".search_list_"+dataid).show();
+					}
+					
+				})
+			})
+			
+			$(".xuanzes").click(function(){
+				if($(this).hasClass("active")){
+					$(this).removeClass("active")
+					
+				}else{
+					
+					$(this).addClass("active")
+				}
+				
+			})
+			
+			
+			// class="tubiao tubiao_li active"
+				
+			function  table_list_display(num){
+				$(".sup_danwei_pop>span").removeClass("active")
+				$(".mainlist_table").addClass("displayno")
+				
+				$(".mainlist_table").eq(num).removeClass("displayno")
+				
+				if(num<2){
+					$(".sup_danwei_pop>span").eq(num).addClass("active")
+				}else{
+					each_jiazai();
+				}
+				
+			}
+			
+			$(".tubiao_li").click(function(){
+				ida=$(".tubiao_li").index(this);
+				tubiao_li_id=0;
+				$(".tableNav").each(function(i){
+					if($(this).hasClass('active')){
+						tubiao_li_id=i;
+					}
+				})
+				
+				//全部隐藏
+				$(".tubiao_li").removeClass("active")
+				$(this).addClass("active");
+				t_l=$(".tableNav").length;
+
+				//打开当前
+				num= ida*t_l+tubiao_li_id;
+				table_list_display(num);
+			})
+			
+			$(".tableNav").click(function(){
+				ida=$(".tableNav").index(this);
+				tubiao_li_id=0;
+				$(".tubiao_li").each(function(i){
+					if($(this).hasClass('active')){
+						tubiao_li_id=i;
+					}
+				})
+				
+				//全部隐藏
+				$(".tableNav").removeClass("active")
+				$(this).addClass("active")
+				t_l=$(".tableNav").length;
+				//打开当前
+				num= tubiao_li_id*t_l+ida;
+				table_list_display(num)
+				
+			})
+			
+			
+			function webpop_dingwei(classname){
+				wh=$(window).height();
+				ch=$('.'+classname).height();
+				$('.'+classname).css({"top":(wh-ch)/2})
+			}
+			//打开弹出层
+			$("#woyaotiwen").click(function(){
+				$(".webpopbg,.my_aq_popbox").show()
+				webpop_dingwei('my_aq_popbox');
+				
+			})
+			//关闭弹出层
+			$("#mydq_close").click(function(){
+				$(".webpopbg,.my_aq_popbox").hide()
+			})
+//			<div  class="allbox myaq_biaoji_qingchu" data-biaoji="1"> 
+			//标记
+			$('.my_aq_biaoji').click(function(){
+				$(".webpopbg,.my_aq_popbox,.mainlistnav").hide();
+				
+				$(".yijianxuanze_box").show();
+				
+				$(".allbox").addClass('myaq_biaoji_qingchu').attr("data-biaoji","2")
+			})
+			$(".yidingnrong>ul>li").click(function(){
+				
+				biaoji=$('.allbox').attr('data-biaoji')
+				if(biaoji<2){ return false;	}
+				is_hav=$(this).hasClass("act_biaoji");
+				if(is_hav){
+					$(this).removeClass("act_biaoji");
+				}else{
+					
+					$(this).addClass("act_biaoji");	
+				}
+				
+			})
+//			完成标记     
+			$("#wanchbiaoji").click(function(){
+				
+				$(".webpopbg,.my_aq_popbox").show()
+				webpop_dingwei('my_aq_popbox');
+				$(".my_aq_biaoji").attr('datamy-bj',2)
+				
+			})
+			//
+			$(".icon-radio").click(function(){
+				obj=$(this).parents('.popradio');
+				obj.find(".icon-radio").removeClass("active");
+				$(this).addClass("active");
+			})
+			
+			$(".submit_my_aq").click(function(){
+				$(".webpopbg,.my_aq_popbox").hide()
+				$(".allbox").removeClass('myaq_biaoji_qingchu').attr("data-biaoji","0");
+				$(".yidingnrong>ul>li").removeClass('act_biaoji')
+				
+				$(".yijianxuanze_box").hide();
+				$(".mainlistnav").show();
+			})
+			//ech list
+			$(".echbox_title_nav>span").click(function(){
+				thisdiv=$(this).parents('.echbox_title_nav');
+				this_id= thisdiv.find('span').index(this);
+				thisdiv.find('span').removeClass('active')
+				$(this).addClass('active')
+			})
+		})
+		
+		
+	</script>
+ 	<script src="js/echarts.min.js"></script>
+  	<script type="text/javascript">
+  		each_jiazai()
+function each_jiazai(){		
+  var bar1 = echarts.init(document.getElementById('echbox_inforbox_1'));
+    option1 = {
+        tooltip : {
+     	   trigger: 'axis'
+    	},
+    legend: {
+        data:['一般公共预算','政府性基金预算','国有资本经营预算'],
+        x: 'center', // 'center' | 'left' | {number},
+        y: '320', // 'center' | 'bottom' | {number},
+		 textStyle : {fontSize : '18',fontFamily : '微软雅黑',},
+       itemGap:40,
+    },
+   grid:{
+        x:50,
+        y:20,
+        x2:30,
+        y2:80,
+		 show : true,
+        borderWidth:1
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['2014年决算比较上年','2015年决算比较上年','2016年决算比较上年','2017年决算比较上年','2018年决算比较上年'],
+        	axisLabel:{ 
+            textStyle:{fontSize:'18',},
+           }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+         {
+            name:'一般公共预算',
+            type:'bar',
+            barWidth :30,
+              itemStyle: {
+				normal: {
+					color: "#22619A",
+					
+				}
+			},
+            data:[ 26, 28, 70, 175, 180],
+          
+        },
+        {
+            name:'政府性基金预算',
+            type:'bar',
+            barWidth :30,
+           itemStyle: {
+				normal: {
+					color: "#21B696",
+					
+				}
+			},
+
+            data:[76, 135, 162, 32, 20],
+           
+        },
+     {
+            name:'国有资本经营预算',
+            type:'bar',
+            barWidth :30,
+              itemStyle: {
+				normal: {
+					color: "#B5BFC5",
+					
+				}
+			},
+            data:[ 46, 38, 20, 205, 100],
+          
+        },
+    ]
+    };
+    bar1.setOption(option1);		
+  		
+  
+  
+  var bar2_1 = echarts.init(document.getElementById('echbox_inforbox_2_1'));
+    option2_1 = {
+     title : {
+        text: '收入结构图',
+      	 x: '10%',
+        y:'15%',
+   	 },   
+   tooltip : {
+   		 trigger: 'axis'
+	},
+  
+   legend: {
+        orient: 'vertical',
+        x: '70%',
+        y:'center',
+        textStyle : {fontSize : '18',fontFamily : '微软雅黑',},
+      	itemGap:40,
+
+        data:['一般公共预算','政府性基金预算','国有资本经营预算']
+    },
+    series: [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['50%', '70%'],
+              center : ['40%', '50%'],
+
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    formatter: "{b} \n \n {d}%",
+                     
+                    textStyle: {
+                        fontSize: '18',
+                        
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+             itemStyle : {
+                normal : {
+					 color: function(params) {
+                        var colorList = [
+                      
+                           '#FFA812','#21B696','#59B1F0',
+                        ];
+                        return colorList[params.dataIndex]
+                    }
+                }
+            },
+
+            data:[
+                {value:335, name:'一般公共预算'},
+                {value:310, name:'政府性基金预算'},
+                {value:234, name:'国有资本经营预算'},
+               
+            ]
+        }
+    ]
+};
+    bar2_1.setOption(option2_1);
+  
+ var bar2_2 = echarts.init(document.getElementById('echbox_inforbox_2_2'));
+    option2_2 = {
+     title : {
+        text: '支出结构图',
+      	 x: '10%',
+        y:'15%',
+   	 },   
+   tooltip : {
+   		 trigger: 'axis'
+	},
+  
+   legend: {
+        orient: 'vertical',
+        x: '70%',
+        y:'center',
+        textStyle : {fontSize : '18',fontFamily : '微软雅黑',},
+      	itemGap:40,
+
+        data:['一般公共预算','政府性基金预算','国有资本经营预算']
+    },
+    series: [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['50%', '70%'],
+              center : ['40%', '50%'],
+
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    formatter: "{b} \n \n {d}%",
+                     
+                    textStyle: {
+                        fontSize: '18',
+                        
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+             itemStyle : {
+                normal : {
+					 color: function(params) {
+                        var colorList = [
+                      
+                           '#E4618D','#21B696','#59B1F0',
+                        ];
+                        return colorList[params.dataIndex]
+                    }
+                }
+            },
+
+            data:[
+                {value:335, name:'一般公共预算'},
+                {value:310, name:'政府性基金预算'},
+                {value:234, name:'国有资本经营预算'},
+               
+            ]
+        }
+    ]
+};
+    bar2_2.setOption(option2_2); 
+ }        
+</script>
+ 	
+ <script>$("#leftNav_1").addClass("active");</script>	
+</body>
+
+
+</html>

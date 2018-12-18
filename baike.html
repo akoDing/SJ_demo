@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.jq22.com/demo/web20160509/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2016 07:41:49 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>闵行区人大</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_684601_z2tyakglw1b.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="css/normalize.min.css" />
+  <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/bacs.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet" />
+    <link href="baike.css" rel="stylesheet" />
+    <style>
+      @media only screen and (min-width: 641px){
+        .am-modal {
+          width: 750px;
+          margin-left: -375px;
+        }
+      }
+    </style>
+    <style>
+      .monitoring_box{
+        margin:0 30px;
+        width:calc(100% - 60px);
+        overflow:auto;
+        zoom:1;
+        background-color:#fff;
+        border-radius:3px;
+      }
+      .modular_title{
+        background-color:#f2f5f8;
+        font-size:22px;
+        color:#47545f;
+        font-weight:bold;
+       	padding:15px 0;
+        margin:0
+      }
+      .modular_title span{
+        padding-left:25px;
+        border-left:12px solid #266cab;
+      }
+      .project_survey{
+        background-color:#fff;
+        padding:25px;
+        line-height:34px;
+        font-size:18px;
+        margin:0;
+        color:#77838d;
+      }
+      .normal_message{
+        padding:0 25px;
+        background-color:#fff;
+        overflow:auto;
+      }
+      .normal_message_list li{
+        padding:25px 0;
+        border-bottom:1px dashed #dcdfe4;
+        overflow:auto;zoom:1;
+        font-size:18px;
+        color:#47545f;
+      }
+      .normal_message_list li div{
+        float:left;
+      }
+      .normal_message_list li .wid_left{
+        width:56%;
+      }
+      .normal_message_list li .wid_right{
+        width:44%;
+      }
+      .catalog{
+        position:relative;
+        border-radius:5px;
+        overflow:hidden;
+        margin:20px 0;
+        background-color:#f2f5f8;
+      }
+      .block_title{
+        background-color:#266cab;
+        color:#fff;
+        margin:0;
+        font-size:20px;
+        font-weight:bold;
+        width:73px;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0;
+      }
+      .block_title span{
+        position:absolute;
+        left:15px;
+        top:45%
+      }
+      .catalog_list{
+        padding:20px 0;
+        padding-left:73px;
+        overflow:auto;
+        zoom:1;
+      }
+      .catalog_list ol{
+        padding:0 5%;
+        float:left;
+        min-height:135px;
+      }
+      .catalog_list ol:not(:first-child){
+        border-left:1px solid #e4e7ea;
+      }
+      .catalog_list .level1 a{
+        font-size:20px;
+        font-weight:bold;
+        color:#266cab;
+        display:block;
+      }
+      .catalog_list .level1 a:hover{
+        text-decoration:underline;
+        color:#266cab
+      }
+      .catalog_list .level2 a{
+        font-size:17px;
+        color:#47545f;
+        line-height:36px;
+        padding:5px 10px
+      }
+      .catalog_list .level2 a:hover{
+        background-color:#3c85c7;
+        color:#fff;
+      }
+      .structures_box{
+        width:calc(100% - 350px);
+        float:left;
+      }
+      .contents{
+        padding:10px 40px;
+        padding-right:0;
+      }
+      .bor_bottom{
+        border-bottom:1px solid #e9edf1;
+      }
+      .con_title{
+        color:#77838d;
+        font-size:18px;
+        font-weight:bold;
+        line-height:50px;
+      }
+      .con_title_txt{
+        font-size:18px;
+        font-weight:normal;
+        line-height:40px;
+      }
+      .contents table{
+        font-size:14px;
+        font-weight:bold;
+        color:#6a7377
+      }
+      .contents table th,.contents table td{
+        padding:10px;
+        font-size:14px;
+      }
+      .contents table td.padding_bag{
+        padding:10px 65px;
+      }
+      .roomBudTable td.color_blue{
+        color:#266cab;
+        /*text-align:left;*/
+       font-weight:bold;
+      }
+      .roomBudTable td.color_blue.tc{
+        text-align:center;
+      }
+      .zmb{
+        display:block;
+        font-weight:bold;
+        font-size:18px;
+        padding:10px 0;
+      }
+      .bor_top_blue{
+        border-top: 3px solid #2D6AA1;
+      }
+      .textbox_a{color:#266cab; text-decoration: underline;}
+      .textbox_a:hover{color:#266cab; text-decoration: underline;}
+    </style>
+</head>
+<body class="pace-done">
+    <div id="wrapper">
+      <nav class="navbar-default navbar-static-side" role="navigation">
+        <script src="left.js"></script>
+      </nav>
+      <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="webtop_head">
+          <script src="head.js"></script>
+        </div>
+        <div class="webnavhover">
+          <span class="active_top">绩效监督 <i class="iconfont icon-icon_colse_b "></i></span>
+          <span class="active" >详情页<i class="iconfont icon-icon_colse_b "></i></span>
+        </div>
+        <div class="budgetTitle fs26">项目名称：绩效预算管理改革全过程</div>
+        <div class="monitoring_box ">
+          <div class="content OneLevelClass" id="head-1" data-id="1" data-name="1.项目概况">
+            <h1 class="modular_title"><span>项目概况</span></h1>
+            <div class="textbox project_survey">为贯彻落实上海市政府、市财政的要求，以及区委全委会“关于全面推行以结果为导向绩效预算管理改革”的精神，推进区政府重点工作，深入推进本区预算绩效管理，提高财政资金使用效益，闵行财政与多个高校合作，引入评级工具并实施本土化改造，在部门预算实行“以结果为导向”预算管理模式。经过多年的积累，逐步建立和完善了前、中、后评价体系，形成了全过程预算绩效管理架构，包括：与部门预算编制同步的事前立项评审，与部门预算执行监督同步的事中评估，支出结果与绩效问责相挂钩的事后评价，在此基础上，建立起了全过程的评价信息公开制度，并形成制度化程序化常态化工作机制。</div>
+          </div>
+          <div class="content OneLevelClass" id="head-2" data-id="2" data-name="2.基本信息">
+            <h1 class="modular_title"><span>基本信息</span></h1>
+            <div class="textbox">
+              <div class="normal_message">
+                <ul class="normal_message_list">
+                  <li>
+                    <div class="wid_left"><span>项目名称：</span><span>绩效预算管理改革全过程</span></div>
+                    <div class="wid_right"><span>项目单位：</span><span>闵行区财政局</span></div>
+                  </li>
+                  <li>
+                    <div class="wid_left"><span>项目类别：</span><span>经常性项目</span></div>
+                    <div class="wid_right"><span>项目负责人：</span><span>王文才</span></div>
+                  </li>
+                  <li>
+                    <div class="wid_left"><span>项目起始时间：</span><span>2017年1月1日~2017年12月31日</span></div>
+                  </li>
+                </ul>
+                <div class="catalog">
+                  <h1 class="block_title"><span>目录</span></h1>
+                  <div class="catalog_list">
+                    <ol>
+                      <li class="level1">
+                        <a href="#head-1">
+                          <span>1</span>
+                          <span>项目概况</span>
+                        </a>
+                      </li>
+                      <li class="level1 pt35">
+                        <a href="#head-2">
+                          <span>2</span>
+                          <span>基本信息</span>
+                        </a>
+                      </li>
+                    </ol>
+                    <ol>
+                      <li class="level1">
+                        <a href="#head-3">
+                          <span>3</span>
+                          <span>预算资金</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-3-1">
+                          <span>·</span>
+                          <span>项目资金购成</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-3-2">
+                          <span>·</span>
+                          <span>项目预算分解</span>
+                        </a>
+                      </li>
+                    </ol>
+                    <ol>
+                      <li class="level1">
+                        <a href="#head-4">
+                          <span>4</span>
+                          <span>立项研究</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-4-1">
+                          <span>·</span>
+                          <span>立项依据</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-4-2">
+                          <span>·</span>
+                          <span>项目必要性</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-4-3">
+                          <span>·</span>
+                          <span>项目可行性</span>
+                        </a>
+                      </li>
+                    </ol>
+                    <ol>
+                      <li class="level1">
+                        <a href="#head-5">
+                          <span>5</span>
+                          <span>绩效目标</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-5-1">
+                          <span>·</span>
+                          <span>项目总目标级年度绩效目标</span>
+                        </a>
+                      </li>
+                    </ol>
+                    <ol>
+                      <li class="level1">
+                        <a href="#head-6">
+                          <span>6</span>
+                          <span>制度保障</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-6-1">
+                          <span>·</span>
+                          <span>项目相关资源投入</span>
+                        </a>
+                      </li>
+                      <li class="level2">
+                        <a href="#head-6-2">
+                          <span>·</span>
+                          <span>制度保障</span>
+                        </a>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content OneLevelClass structures_box" id="head-3" data-id="3" data-name="3.预算资金">
+            <h1 class="modular_title"><span>预算资金</span></h1>
+            <div class="content contents" id="head-3-1">
+              <h2 class="SecondaryClass"  data-id="3-1" data-name="项目资金构成">· 项目资金构成</h2>
+              <div class="textbox  bor_bottom pb20">
+                <ul>
+                  <li class="con_title">一、项目总预算：220.4万元</li>
+                  <li class="con_title">二、当年预算</li>
+                  <li class="con_title_txt">（一）财政拨款：220.4万元</li>
+                  <li class="con_title_txt pl30">1.上级财政拨款：</li>
+                  <li class="con_title_txt pl30">2.本级财政安排：220.4万元</li>
+                  <li class="con_title_txt pl30">3.下级财政配套：</li>
+                  <li class="con_title_txt">（二）其他资金</li>
+                </ul>
+              </div>
+            </div>
+            <div class="content contents" id="head-3-2">
+              <h2 class="SecondaryClass"  data-id="3-2" data-name="项目预算分解">· 项目预算分解</h2>
+              <div class="textbox mt20">
+                <table width="100%" class="roomBudTable compareTable"> 
+                   <tr>
+                    <th width="90"></th>
+                    <th width="460" colspan="4"></th>
+                    <th>明细金额</th>
+                    <th>单价</th>
+                    <th>依据</th>
+                    <th>数量</th>
+                    <th>依据</th> 
+                    <th>备注</th> 
+                   </tr> 
+                  <tr>
+                    <td rowspan="8">项目预算分解</td>
+                    <td rowspan="8" width="86">构成明细</td>
+                    <td rowspan="8" width="118">项目名称：绩效预算管理改革全过程</td>
+                    <td width="119">项目支出绩效前评价</td>
+                    <td>委托第三方协助评价费</td>
+                    <td>324,000万元</td>
+                    <td>18,000万元</td>
+                    <td>政府采购标准、历史成本标准</td>
+                    <td>18</td>
+                    <td>历年评价个数情况</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>项目支出绩效前评价</td>
+                    <td>前评价总报告</td>
+                    <td>30,000万元</td>
+                    <td>30,000万元</td>
+                    <td>市场询价、历史成本标准</td>
+                    <td>1</td>
+                    <td>总报告1篇</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>项目支出绩效跟踪评价</td>
+                    <td>跟踪评价总报告</td>
+                    <td>50,000万元</td>
+                    <td>50,000万元</td>
+                    <td>市场询价、历史成本标准</td>
+                    <td>1</td>
+                    <td>总报告1篇</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>项目支出绩效后评价</td>
+                    <td>委托第三方独立评价费</td>
+                    <td>1,200,000万元</td>
+                    <td>75,000万元</td>
+                    <td>政府采购标准、历史成本标准</td>
+                    <td>16</td>
+                    <td>历年评价个数情况</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>项目支出绩效后评价</td>
+                    <td>后评价总报告</td>
+                    <td>50,000万元</td>
+                    <td>50,000万元</td>
+                    <td>市场询价、历史成本标准</td>
+                    <td>1</td>
+                    <td>总报告1篇</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>部门整体评价</td>
+                    <td>委托第三方独立评价费</td>
+                    <td>240,000万元</td>
+                    <td>8,000万元</td>
+                    <td>市场询价</td>
+                    <td>3</td>
+                    <td>市级工作要点</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>绩效管理系统驻点服务</td>
+                    <td>驻点服务费</td>
+                    <td>150,000万元</td>
+                    <td>15,000万元</td>
+                    <td>市平均标准</td>
+                    <td>10</td>
+                    <td>10个月工作量</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td>报告评审</td>
+                    <td>专家评审费</td>
+                    <td>160,000万元</td>
+                    <td>800万元</td>
+                    <td>市财政培训费文件标准</td>
+                    <td>200</td>
+                    <td>评审报告个数</td>
+                    <td></td>
+                  </tr> 
+                  <tr>
+                    <td colspan="5" class="color_blue">金额合计</td>
+                    <td class="color_blue tc">2,204,000万元</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="content OneLevelClass structures_box" id="head-4" data-id="4" data-name="4.立项研究">
+            <h1 class="modular_title"><span>立项研究</span> </h1>
+            <div class="content contents" id="head-4-1">
+              <h2 class="SecondaryClass"  data-id="4-1" data-name="立项依据">· 立项依据</h2>
+              <div class="textbox">
+                <p>1）<a href="regulations_infor.html" class="textbox_a">《上海市人民政府办公厅转发市财政局关于全面推进预算绩效管理意见的通知》（沪府办发〔2013〕55号）；</a></p>
+                <p>2）《上海市预算绩效管理实施办法》（沪财绩〔2014〕22号）；</p>
+                <p>3）《2016年预算绩效管理工作要点》；</p>
+                <p>4）闵行区委四届六次、九次、十三次、十七次全委会“关于全面推行以结果为导向绩效预算管理改革”的决议。</p>
+                <p>5）《闵行区财政预算绩效管理实施办法》</p>
+              </div>
+            </div>
+            <div class="content contents" id="head-4-2">
+              <h2 class="SecondaryClass"  data-id="4-2" data-name="项目必要性">· 项目必要性</h2>
+              <div class="textbox">
+                <p>1）贯彻中央、上海市决策部署，进一步建立健全本市政府绩效管理制度，促进政府绩效管理的科学化、规范化、制度化，完善公共财政管理体系，强化财政支出责任，提高财政资金使用绩效；</p>
+                <p>2）预算绩效管理是政府绩效管理的重要组成部分。全面推进预算绩效管理是深入贯彻落实科学发展观的必然要求，是财政科学化、精细化管理的重要内容和基本要求，对于加快“创新驱动、转型发展”，建设服务、高效、责任、透明、法治政府，构建和谐社会，具有重要意义。</p>
+              </div>
+            </div>
+            <div class="content contents" id="head-4-3">
+              <h2 class="SecondaryClass"  data-id="4-3" data-name="项目可行性">· 项目可行性</h2>
+              <div class="textbox">
+                <p>1）统一领导，分级管理。预算绩效管理在区政府的统一领导下，由财政部门牵头，各部门分工负责。财政部门负责制定预算绩效管理的相关制度，组织、指导本级预算部门和下级财政部门开展预算绩效管理工作。各预算部门是本单位预算绩效管理的责任主体，负责本级和所属单位的预算绩效管理工作。</p>
+                <p>2）统筹规划，全面推进。财政部门结合实际，科学制定本地区、本部门推进预算绩效管理的工作规划，以项目支出的绩效管理为突破口，加强绩效目标管理，实施绩效监控，开展绩效评价。在此基础上，稳步推进部门（单位）整体支出的绩效评价和支出管理绩效综合评价试点。</p>
+                <p>3）科学规范，公开透明。建立科学规范、切合实际、便于实施、注重效率的预算绩效管理制度体系和工作规程；按照“真实、客观、高效、公正、公平、公开”的要求，开展预算绩效管理，做到基础数据准确、评价指标科学、评价方法合理、评价结果依法公开。</p>
+                <p>4）强化问责，激励约束。建立有效的绩效问责机制和激励约束机制，实行低效问责、高效激励，督促预算部门和单位切实承担预算绩效管理的责任。</p>
+              </div>
+            </div>
+          </div>
+          <div class="content OneLevelClass structures_box" id="head-5" data-id="5" data-name="5.绩效目标">
+            <h1 class="modular_title"><span>绩效目标</span> </h1>
+            <div class="content contents"  id="head-5-1">
+              <h2 class="SecondaryClass"  data-id="5-1" data-name="项目总目标级年度绩效目标">· 项目总目标级年度绩效目标</h2>
+              <div class="textbox">
+                <div class="bor_bottom pb25">
+                  <span class="zmb">项目总目标：</span>
+                  <p>进一步完善公共财政体制机制，强化部门支出责任，逐步建立以绩效目标实现为导向，以绩效运行监控和绩效评价为手段，以结果应用为保障，以改进预算管理、优化资源配置、控制节约成本、提高公共产品质量和公共服务水平为目的，管理科学、运转高效的全过程预算绩效管理体系。逐步建立较为完善的预算绩效管理运行机制，着力推进预算绩效管理的制度化和规范化，努力实现“两个覆盖”，即预算绩效管理工作覆盖所有部门，实施全过程预算绩效管理的要求覆盖所有财政性资金。</p>
+                </div>
+                <div class="bor_bottom pb25">
+                  <span class="zmb">年度绩效目标：</span>
+                  <p>1）前评价重点评价项目数≥18；</p>
+                  <p>2）后评价重点评价项目数≥16；</p>
+                  <p>3）部门整体评价部门数：3；    </p>
+                  <p>4）绩效评价部门覆盖率：100%；</p>
+                  <p>5）评价报告质量合格率：100%</p>
+                </div>
+                <div class="pb25">
+                  <span class="zmb">绩效目标（明细）：</span>
+                  <table class="roomBudTable compareTable">
+                    <tr>
+                      <th width="128">一级目标</th>
+                      <th width="212">二级目标</th>
+                      <th width="212">三级目标</th>
+                      <th width="212">目标值</th>
+                      <th width="450">备注</th>
+                    </tr>
+                    <tr>
+                      <td rowspan="9">产出目标</td>
+                      <td>数量目标</td>
+                      <td>前评价重点评价项目数</td>
+                      <td>≥18</td>
+                      <td class="padding_bag">在预算单位自评基础上，区财政组织不少于18个反映部门主要工作情况的重点项目进行重点评价</td>
+                    </tr>
+                    <tr>
+                      <td>数量目标</td>
+                      <td>后评价重点评价项目数</td>
+                      <td>≥16</td>
+                      <td class="padding_bag">在预算单位自评基础上，区财政组织不少于16个反映部门主要工作情况的重点项目进行重点评价</td>
+                    </tr>
+                    <tr>
+                      <td>数量目标</td>
+                      <td>部门整体评价部门数</td>
+                      <td>3</td>
+                      <td class="padding_bag">选择财务管理及项目管理比较成熟的部门开展试点</td>
+                    </tr>
+                    <tr>
+                      <td>数量目标</td>
+                      <td>绩效评价部门覆盖率</td>
+                      <td>100%</td>
+                      <td class="padding_bag">考察开展绩效评价的部门覆盖情况</td>
+                    </tr>
+                    <tr>
+                      <td>质量目标</td>
+                      <td>评价报告质量合格率</td>
+                      <td>≥95%</td>
+                      <td class="padding_bag">考察评价报告1、是否符合财政要求的质量标准；2、是否经专家组评定确认</td>
+                    </tr>
+                    <tr>
+                      <td>质量目标</td>
+                      <td>评价结论准确性</td>
+                      <td>合理</td>
+                      <td class="padding_bag">考察1、评价标准是否合理，能否有效反应项目情况；2、评价内容是否全面，结论是否准确</td>
+                    </tr>
+                    <tr>
+                      <td>质量目标</td>
+                      <td>评价资料完整性</td>
+                      <td>完整</td>
+                      <td class="padding_bag">考察评价相关作证资料是否完整</td>
+                    </tr>
+                    <tr>
+                      <td>时效目标</td>
+                      <td>重点评价完成及时性</td>
+                      <td>100%</td>
+                      <td class="padding_bag">前评价12月底前完成，跟踪10月底前完成，后评价8月底前完成</td>
+                    </tr>
+                    <tr>
+                      <td>成本目标</td>
+                      <td>评价经费经济性</td>
+                      <td>高</td>
+                      <td class="padding_bag">考察1、评价经费与服务工作量是否匹配；2、评价经费与评价报告质量是否匹配；3、收费标准≤全市平均收费标准</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="5">效果目标</td>
+                      <td>社会效益目标</td>
+                      <td>评价结果整改率</td>
+                      <td>≥90%</td>
+                      <td class="padding_bag">考察评价建议是否被预算主管部门有效利用</td>
+                    </tr>
+                    <tr>
+                      <td>社会效益目标</td>
+                      <td>财政资金使用效率</td>
+                      <td>提高</td>
+                      <td class="padding_bag">考察绩效评价结果是否优化项目预算资金，提高资金使用效率，完善项目管理。</td>
+                    </tr>
+                    <tr>
+                      <td>可持续目标</td>
+                      <td>第三方机构库建设</td>
+                      <td>良好</td>
+                      <td class="padding_bag">考察是否对第三方咨询团队进行公开招标，并对入库机构进行有效管理和考核</td>
+                    </tr>
+                    <tr>
+                      <td>可持续目标</td>
+                      <td>制度建设情况</td>
+                      <td>良好</td>
+                      <td class="padding_bag">考察是否建立了相应的绩效预算管理制度和配套措施</td>
+                    </tr>
+                    <tr>
+                      <td>可持续目标</td>
+                      <td>专家队伍建设</td>
+                      <td>良好</td>
+                      <td class="padding_bag">考察是否建立了分类，分行业的专家库</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">影响力目标</td>
+                      <td>满意度目标</td>
+                      <td>被评价部门满意度</td>
+                      <td>85%</td>
+                      <td class="padding_bag"></td>
+                    </tr>
+                    <tr>
+                      <td>满意度目标</td>
+                      <td>中介服务满意度</td>
+                      <td>85%</td>
+                      <td class="padding_bag"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content OneLevelClass structures_box" id="head-6" data-id="6" data-name="6.制度保障">
+            <h1 class="modular_title"><span>制度保障</span> </h1>
+              <div class="content contents" id="head-6-1">
+              <h2 class="SecondaryClass"  data-id="6-1" data-name="项目相关资源投入">· 项目相关资源投入</h2>
+              <div class="textbox">
+                <div class="">
+                  <span class="zmb">1）加强组织领导：</span>
+                  <p>对预算绩效管理工作的牵头管理，健全组织机构，理顺工作机制，明确工作目标，加强业务指导。各预算部门（单位）统筹安排内部力量，明确具体责任部门，积极实施预算绩效管理工作，形成工作合力。</p>
+                </div>
+                <div class="">
+                  <span class="zmb">2）善管理体系：</span>
+                  <p>制定实施预算绩效管理的配套制度，规范绩效目标、绩效运行监控、绩效评价、结果应用等各项管理流程，确保预算绩效管理与预算编制、执行、监督的有效衔接，完善支出管理绩效综合评价指标框架。完善对第三方的管理制度，建立健全绩效评价专家库和绩效评价机构库，加强动态管理，充分发挥第三方在绩效评价推进过程中的积极作用。</p>
+                </div>
+                <div class="">
+                  <span class="zmb">3）加强宣传培训：</span>
+                  <p>充分利用各类媒体、政府网络平台等，积极宣传预算绩效管理理念，强化预算绩效意识，扩大预算绩效管理的社会影响，健全培训机制，加大预算绩效管理培训力度，增强预算绩效管理工作人员的业务素质。</p>
+                </div>
+                <div class="">
+                  <span class="zmb">4）优化技术手段：</span>
+                  <p>建立预算绩效管理信息系统，建立预算绩效管理数据交换平台，为提升预算绩效管理质量提供技术支撑。</p>
+                </div>
+                <div class="">
+                  <span class="zmb">5）建立考核机制：</span>
+                  <p>将预算绩效管理工作纳入本级政府对部门的年度工作目标责任制考核，并将考核结果予以通报。</p>
+                </div>
+              </div>
+            </div>
+            <div class="content contents" id="head-6-2">
+              <h2 class="SecondaryClass"  data-id="6-2" data-name="制度保障">· 制度保障</h2>
+              <div class="textbox">
+                <table class="roomBudTable compareTable">
+                  <tr>
+                    <th width="114">制度保障</th>
+                    <th width="245">文件名称</th>
+                    <th width="382">具体措施</th>
+                    <th width="450" colspan="3">保障阶段</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">项目管理制度</td>
+                    <td>《上海市预算绩效管理实施办法》</td>
+                    <td>明确了绩效评价的目的、依据、适用范围、组织管理；对绩效目标管理、绩效跟踪管理、绩效评价管理提出了相应的管理要求和评价内容；对绩效评价结果应用管理和相应的指标体系进行了明确。</td>
+                    <td>立项和计划阶段 </td>
+                    <td>实施阶段</td>
+                    <td>收尾和完成阶段</td>
+                  </tr>
+                  <tr>
+                    <td>《闵行区财政预算绩效管理实施办法》</td>
+                    <td>根据市预算绩效实施办法，进一步细化了绩效目标管理、绩效跟踪管理、绩效评价管理的管理要求和评价内容；对绩效前评价以及绩效评价结果应用管理提供了相应的指标体系。</td>
+                    <td>立项和计划阶段</td>
+                    <td>实施阶段</td>
+                    <td>收尾和完成阶段</td>
+                  </tr>
+                  <tr>
+                    <td>预算管理制度</td>
+                    <td>《闵行区政府购买服务操作细则》</td>
+                    <td>对政府购买服务的要求和方式进行了明确</td>
+                    <td>立项和计划阶段</td>
+                    <td>实施阶段</td>
+                    <td>收尾和完成阶段</td>
+                  </tr>
+                  <tr>
+                    <td>预算管理制度</td>
+                    <td>《立项评价操作指南》</td>
+                    <td>明确了立项评价的评价范围、评价方式、评价要求、评价流程以及立项评价的指标体系</td>
+                    <td>立项和计划阶段</td>
+                    <td>实施阶段</td>
+                    <td>收尾和完成阶段</td>
+                  </tr>
+                  <tr>
+                    <td>预算管理制度</td>
+                    <td>《闵行区财政局预算编制手册》</td>
+                    <td>根据预算管理的要求，定额标准，程序进行绩效预算项目的编制</td>
+                    <td>立项和计划阶段</td>
+                    <td>实施阶段</td>
+                    <td>收尾和完成阶段</td>
+                  </tr>
+                  <tr>
+                    <td>预算管理制度</td>
+                    <td>《闵行区财政局财务管理内部控制制度》</td>
+                    <td>根据区财政局财务管理和内控制度进行预算执行管理</td>
+                    <td>立项和计划阶段</td>
+                    <td>实施阶段</td>
+                    <td>收尾和完成阶段</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide_textbox">
+            <ul id="listul"></ul>
+          </div>
+          <div class="slide_button"><img src="img/slide_shu.jpg" id="yingcan_slide" /> <img src="img/slide_top.jpg" id="fanhui_top" /></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <!-- 弹出层 -->
+  
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!--范围-->
+    <script type="text/javascript" src="js/ion.rangeSlider.js"></script> 
+    
+   <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/web.js"></script>
+  <script src="js/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+$(function(){
+	$(window).scroll(function() {
+	   s_h = $(window).scrollTop();  //滚动条高度
+	   w_h = $(window).height();   //屏幕高度
+	   
+	   //固定高度
+	   	wh=$(".webtop_head").height();
+  		wh_h=$(".webnavhover").height();
+  		th=$(".budgetTitle").height();
+		guding_h=wh+wh_h+th;
+	   
+	   all_h=guding_h;
+	   tiaochu=false;
+	   $(".OneLevelClass").each(function(){
+	   		divNum=$(this).find(".contents").length;
+	   		
+	   		if(divNum>0){
+	   			this_h=54;
+	   		}else{
+	   			this_h=$(this).height();	
+	   		}
+			//判断是否有二级内容
+
+	   		all_h+=this_h;
+	   		if(all_h>s_h){
+	   			sh_id=$(this).attr("id")
+				$("#listul>li").removeClass("active")
+	   			$("."+sh_id).addClass("active")
+	   			
+	   			
+	   			
+	   			if(all_h<s_h+54){
+	   				return false
+	   			}
+	   		//一级判断
+	   		}
+	   		lista=false;
+	   		if(divNum>0){
+	   			$(this).find(".contents").each(function(){
+	   				all_h+=$(this).height() + 20;
+	   				if(all_h>s_h){
+			   			sh_id=$(this).attr("id")
+			   			lista=true;
+						$("#listul>li").removeClass("active")
+			   			$("."+sh_id).addClass("active")
+			   			return false
+			   		}
+	   			})
+		   		
+		    }
+	   		if(lista){
+	   			return false	
+	   		}
+	   })
+	   
+	});
+		
+	
+	
+	
+	
+	
+	
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+  
+  	wh=$(".webtop_head").height();
+  	wh_h=$(".webnavhover").height();
+  	th=$(".budgetTitle").height();
+  	h1=$("#head-1").height();
+  	h2=$("#head-2").height();
+  	
+  	
+  
+  	all_h=wh+ wh_h + th + h1+ h2;
+  	
+    if(scroll >= all_h){
+      $(".slide").show();
+    }else{
+      $(".slide").hide();
+    }
+  })
+  
+  var ul_str='';
+  $(".OneLevelClass").each(function(){
+    
+    data_id=$(this).attr("data-id");
+    
+    data_name=$(this).attr("data-name");
+    ul_str+='<li class="title head-'+data_id+'" id="head-'+data_id+'" big_id="" dataid="head-'+data_id+'"><div class="slideDian"></div><a>'+data_name+'</a></li>';
+    
+    
+    towNum=$(this).find(".SecondaryClass").length;
+    if(towNum>0){
+      $(this).find(".SecondaryClass").each(function(){
+        data_id1=$(this).attr("data-id");
+        data_name1=$(this).attr("data-name");
+        ul_str+='<li class="head-'+data_id1+'" dataid="head-'+data_id1+'" big_id="head-'+data_id+'" ><a>'+data_id1+' '+data_name1+'</a></li>';
+      })
+    
+    }
+    $("#listul").html(ul_str);
+    
+  	aalist()
+  
+  
+  
+  
+  
+    
+  
+  })
+  
+  
+  function aalist(){
+    
+    $("#listul>li").click(function(){
+    $("#listul>li").removeClass("active");
+    
+     $(this).addClass("active");
+    dataid=$(this).attr("dataid");
+    window.location.href='baike.html#'+dataid;
+    
+  })
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $("#yingcan_slide").click(function(){
+    if($(".slide_textbox>ul").hasClass("hide")){
+      $(".slide_textbox>ul").removeClass("hide")
+    }else{
+      $(".slide_textbox>ul").addClass("hide")
+    }
+  })
+  
+  $("#fanhui_top").click(function(){
+     $(window).scrollTop(0);
+  })
+
+})
+
+
+
+
+</script>
+
+  
+<script>$("#leftNav_4").addClass("active");</script>	
+</body>
+
+
+</html>

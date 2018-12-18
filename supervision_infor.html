@@ -1,0 +1,1153 @@
+
+
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.jq22.com/demo/web20160509/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2016 07:41:49 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>闵行区人大</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+  
+	<link href="css/bootstrap-select.min.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+  
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+  <link href="http://at.alicdn.com/t/font_684601_z2tyakglw1b.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.min.css" />
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bacs.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet" />
+    <link href="css/css1.css" rel="stylesheet" />
+    <style>
+      @media only screen and (min-width: 641px){
+        .am-modal {
+          width: 800px;
+          margin-left: -375px;
+        }
+      }
+        
+    </style>
+
+</head>
+
+<body class="pace-done">
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+    			<script src="left.js"></script>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+			<div class="webtop_head">
+				<script src="head.js"></script>
+			</div>
+			<div class="webnavhover">
+				 <span  class="active_top">审查监督 <i class="iconfont icon-icon_colse_b "></i></span>
+				 <span class="active">预算账册<i class="iconfont icon-icon_colse_b "></i></span>
+			</div>
+			
+			<div class="mainInforbox">
+				<div class="websearchbox b_b_x">
+					<div class="websearchbox_li">
+						<span>年份：</span>
+						<label>
+						    <input class="form-control dateimg"  type="text" id="listdata_year" placeholder="请选择">
+
+						</label>
+					</div>
+					<div class="websearchbox_li no">
+						<span class="fl">资金性质：</span>
+						<label class="xuanzes fs16"   data-id='1'>一般公共预算</label>	
+						<label  class="xuanzes fs16"  data-id='2'>政府性基金预算</label>
+						<label  class="xuanzes fs16"  data-id='3'>国有资本经营预算</label>
+					</div>
+					<div class="search_an">查询</div>
+				</div>
+				<div class="top_bottom b_b_x">
+	                <span class="bot_p fs16 fwb">已选条件</span>
+	                <ul class="bot_ul clearfix" id="search_liebiao">
+	                  <!--<li>上海市 <i class="iconfont icon-icon_colse_b guanbi"></i></li>
+	                  <li>浦东新区 <i class="iconfont icon-icon_colse_b guanbi"></i></li>-->
+	                </ul>
+	                <div class="qingchu" id="qingchu"><i class="iconfont icon-lajitong"></i> 清除全部</div>
+	            </div>
+	            <div class="top_bottom b_b_x">
+	                <span class="bot_p fs16 fwb">已隐藏操作列</span>
+	                <ul class="bot_ul clearfix" id="yincanliebiao">
+	                </ul>
+	                <div class="qingchu2"><i class="iconfont icon-lajitong"></i> 清除全部</div>
+	            </div>
+	            <div class="sup_infor_title fs26">闵行区财政收支预算汇总表
+	            
+	            <div class="sup_danwei_pop">
+	            	<span class="active">单位：亿元</span>
+	            	<span>单位：%</span>
+	            	<span>单位：±%</span>
+	            	<span>单位：±%</span>
+	            	
+	            </div>
+	            </div>
+				<div class="mainlistnav">
+					<ul class="main_nav_left">
+						<li class="tableNav active"><i class="iconfont icon-shuju"></i>数据</li>
+						<li class="tableNav"><i class="iconfont icon-shujushixin"></i>结构</li>
+						<li class="tableNav"><i class="iconfont icon-shuju2">趋势</i></li>
+						<li class="tableNav"><i class="iconfont icon-shuju1"></i>比率</li>
+						<li class="tubiao tubiao_li active" data-id='0'><i class="iconfont icon-table"></i>表</li>
+						<li class="tubiao_li" data-id='1'><i class="iconfont icon-shuju1"></i>图</li>
+						
+					</ul>
+					
+					<ul class="main_nav_right">
+						
+						<li  id="woyaotiwen"><i class="iconfont icon-shenhebijijishibenxiezi"></i><span>我要提问</span></li>
+					</ul>
+				</div>
+				<div class="yijianxuanze_box fs16">
+					<i class="iconfont icon-zhuyi"></i> 提示：请点击问题数据
+					<span class="shou anniu" id="wanchbiaoji">完成选择</span>
+				</div>
+				<div class="clearbox"></div>
+				
+			<div class="mainlist_table">
+					<!--大于1 为标记     标记后 加样式     去除 选择控件-->	
+					<div  class="allbox" data-biaoji="1"> 
+							<div class="firstbox">
+								<div class="tableLeft_li outlist">
+										<b>项目</b>
+										<span class="lines"></span> 
+										<em>科目</em>								</div>
+								<ul class="tabelul allboxlist">
+									<li class="yincans"  title="合计"><strong>合计</strong></li>
+									<li class="yincans search_list_1"  title="其中：一般公共预算"><a href="supervision_infor_F1_1.html">其中：一般公共预算</a></li>
+									<li class="yincans search_list_2"  title="政府性基金预算">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 政府性基金预算</li>
+									<li class="yincans search_list_3"  title="国有资本经营预算">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 国有资本经营预算</li>
+								
+								</ul>
+							</div>
+				
+<div class="yidongbox">
+								<div class="yidongbox_ul">
+								
+									
+									<div class="yidongbox_li" style="width:800px" data-dj='0' id="yincan_1">
+									  		<div class="tableLeft_li">
+									  				<div class="lititle">
+													
+									  					<span class="lititlespan">收  入（<a href="supervision_infor_E1_5.html">查阅区本级</a>）</span>
+												</div>	
+									  				<ul class="yidongNav allboxlist">
+												
+										<li  class="yidongNavli li_close_0" data-id="li_close_0" data-name="2018年预算数">2018年预算数 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang" data-id='li_close_0'>显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_1" data-id="li_close_1" data-name="调整预算">调整预算（+-额) <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang" data-id='li_close_1'>显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_2" data-id="li_close_2" data-name="调整后预算">调整后预算 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang" data-id='li_close_2'>显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_3" data-id="li_close_3" data-name="累计执行数">累计执行数 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang" data-id='li_close_3'>显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_4" data-id="li_close_4" data-name="2017年决算">2017年决算 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang" data-id='li_close_4'>显示/隐藏</li></ul></div></span>	</li>
+									  				</ul>
+									  						<div class="yidingnrong">
+																						  					<ul >
+																													<li class="li_close_0 caiwu_shuzi b" data-num='1852'>1,852.00</li>
+																														<li class="li_close_1 caiwu_shuzi b" data-num='1966'>1,966.00</li>
+																														<li class="li_close_2 caiwu_shuzi b" data-num='1102'>1,002.00</li>
+																														<li class="li_close_3 caiwu_shuzi b" data-num='1728'>1,728.00</li>
+																														<li class="li_close_4 caiwu_shuzi b" data-num='2,023'>2023.00</li>
+																									  					
+									  					</ul>
+									  													  					<ul class="search_list_1">
+																													<li class="li_close_0 caiwu_shuzi" data-num='952'>952.00</li>
+																														<li class="li_close_1 caiwu_shuzi" data-num='576'>576.00</li>
+																														<li class="li_close_2 caiwu_shuzi" data-num='263'>263.00</li>
+																														<li class="li_close_3 caiwu_shuzi" data-num='924'>924.00</li>
+																														<li class="li_close_4 caiwu_shuzi" data-num='965'>965.00</li>
+																									  					
+									  					</ul>
+									  													  					<ul class="search_list_2">
+																													<li class="li_close_0 caiwu_shuzi" data-num='567'>567.00</li>
+																														<li class="li_close_1 caiwu_shuzi" data-num='554'>554.00</li>
+																														<li class="li_close_2 caiwu_shuzi" data-num='376'>376.00</li>
+																														<li class="li_close_3 caiwu_shuzi" data-num='578'>578.00</li>
+																									  					<li class="active li_close_4 caiwu_shuzi" data-num='776'>
+																									  						776.00
+																									  						<div class="yuan">
+										  							<div class="yuann">
+										  								<div class="yuann_pop">
+										  									<div class="yuann_pop_div">
+										  										<div class="title">说明事项  <img src="img/baiseclose.png" class="baiseclose"></div>
+										  										<div>《中华人民共和国规定》第十条第二点说明有关规定，点击查看详情！第十条第二点说明有关规定，点击查看详情！</div>
+										  										<div class="popsjiao"></div>
+										  									</div>
+										  								</div>		
+										  							</div>
+										  						</div>
+										  					</li>
+																									  					
+									  					</ul>
+									  													  					<ul class="search_list_3">
+																													<li class="li_close_0 caiwu_shuzi" data-num='333'>333.00</li>
+																														<li class="li_close_1 caiwu_shuzi" data-num='836'>836.00</li>
+																														<li class="li_close_2 caiwu_shuzi" data-num='465'>465.00</li>
+																														<li class="act_hs li_close_3 caiwu_shuzi" data-num='226'>
+										  						
+										  						226.00										  						<div class="yuan">
+										  							<div class="yuann">
+										  								<div class="yuann_pop">
+										  									<div class="yuann_pop_div">
+										  										<div class="title">说明事项  <img src="img/baiseclose.png" class="baiseclose"></div>
+										  										<div>《中华人民共和国规定》第十条第二点说明有关规定，点击查看详情！第十条第二点说明有关规定，点击查看详情！</div>
+										  										<div class="popsjiao"></div>
+										  									</div>
+										  								</div>		
+										  							</div>
+										  						</div>
+										  					</li>
+																									  					
+																														<li class="li_close_4 caiwu_shuzi" data-num='272'>272.00</li>
+																									  					
+									  					</ul>
+									  													  					
+									  					
+									  					
+									  				</div>
+									  		
+
+									  		</div>	
+									  </div>	
+										
+									
+									<div class="yidongbox_li" style="width:800px" data-dj='0' id="yincan_2">
+									  		<div class="tableLeft_li">
+									  				<div class="lititle">
+													
+									  					<span class="lititlespan"><a href="supervision_infor_J1_1.html">支  出</a>（<a href="supervision_infor_E1_5.html">查阅区本级</a>）</span>
+												</div>	
+									  				<ul class="yidongNav allboxlist">
+										<li  class="yidongNavli li_close_10" data-id="li_close_10" data-name="2018年预算数">2018年预算数 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang">显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_11" data-id="li_close_11" data-name="调整预算">调整预算（+-额) <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang">显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_12" data-id="li_close_12" data-name="调整后预算">调整后预算 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang">显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_13" data-id="li_close_13" data-name="累计执行数">累计执行数 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang">显示/隐藏</li></ul></div></span>	</li>
+										<li  class="yidongNavli li_close_14" data-id="li_close_14" data-name="2017年决算">2017年决算 <span class="tavnavbox"><img src="img/tablenavbg.jpg"><div class="lititle_pop"><ul ><li class="shuaixuan">筛选</li><li class="paixu" data-sort='0'>排序</li><li class="li_pop_dongjie">冻结</li><li class="li_pop_yincang">显示/隐藏</li></ul></div></span>	</li>
+									  			</ul>
+									  				<div class="yidingnrong">
+																						  					<ul >
+																													<li class="li_close_10 caiwu_shuzi  caiwu_shuzi b" data-num='1103'>1,103.00</li>
+																														<li class="li_close_11 caiwu_shuzi  b" data-num='1508'>1,508.00</li>
+																														<li class="li_close_12 caiwu_shuzi  b" data-num='1918'>1,918.00</li>
+																														<li class="li_close_13 caiwu_shuzi  b" data-num='1857'>1,857.00</li>
+																														<li class="li_close_14 caiwu_shuzi  b" data-num='2061'>2,061.00</li>
+																									  					
+									  					</ul>
+									  													  					<ul class="search_list_1">
+																													<li class="li_close_10 caiwu_shuzi " data-num='162'>162.00</li>
+																														<li class="li_close_11 caiwu_shuzi " data-num='460'>460.00</li>
+																														<li class="li_close_12 caiwu_shuzi " data-num='638'>638.00</li>
+																														<li class="li_close_13 caiwu_shuzi " data-num='594'>594.00</li>
+																														<li class="li_close_14 caiwu_shuzi " data-num='422'>422.00</li>
+																									  					
+									  					</ul>
+									  													  					<ul class="search_list_2">
+																													<li class="li_close_10 caiwu_shuzi " data-num='191'>191.00</li>
+																														<li class="li_close_11 caiwu_shuzi " data-num='613'>613.00</li>
+																									  					<li class="li_close_12 caiwu_shuzi " data-num='640'>640.00</li>
+																														<li class="li_close_13 caiwu_shuzi " data-num='957'>957.00</li>
+																														<li class="li_close_14 caiwu_shuzi " data-num='815'>815.00</li>
+																									  					
+									  					</ul>
+									  													  					<ul class="search_list_3">
+																													<li class="li_close_10 caiwu_shuzi " data-num='750'>750.00</li>
+																									  					<li class="li_close_11 caiwu_shuzi " data-num='435'>435.00</li>
+																														<li class="li_close_12 caiwu_shuzi " data-num='630'>630.00</li>
+																														<li class="li_close_13 caiwu_shuzi " data-num='306'>306.00</li>
+																														<li class="li_close_14 caiwu_shuzi " data-num='824'>824.00</li>
+																									  					
+									  					</ul>
+									  													  					
+									  					
+									  					
+									  				</div>
+									  		
+									  		</div>	
+									  </div>	
+										
+									
+									<!--测试资料-->
+									
+										
+									<!---->	
+								</div>
+							</div>
+					
+
+
+					
+					</div>
+
+					<!--滚动条 data-gl  1不冻结  2冻结 -->	
+	
+					
+					<div  id="sliderBox" data-dj='1' data-width="0">
+						<div id="sliderBox_div" > </div>
+					</div>
+					
+					
+				</div>
+				<div class="mainlist_table displayno">
+<table width="100%" class="mainlist_table_table">
+  <tr>
+    <td rowspan="2" width="200" class="table_duijiaoxian" >
+    	
+										<b>项目</b>
+										
+										<em>科目</em></td>
+    <th colspan="5">收  入（查阅区本级）</th>
+    <th colspan="5">支  出（查阅区本级）</th>
+  </tr>
+    <tr>
+    <th class="table_th">2018年预算数</th>
+	<th class="table_th">调整预算   （+-额）</th>
+    <th class="table_th">调整后预算</th>
+	<th class="table_th">累计执行数</th>
+		<th class="table_th">2017年决算</th>
+		<th class="table_th">2018年预算数	</th>		     		
+
+		<th class="table_th">调整预算   （+-额）</th>
+		<th class="table_th">调整后预算 </th>
+			<th class="table_th">累计执行数</th>
+			<th class="table_th">2017年决算</th>
+  </tr>
+   <tr class="heji_tr">
+     <td>合    计</td>
+     <td class='caiwu_num'>1,029.00</td>
+     <td class='caiwu_num'>1,425.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+  </tr>
+  <tr>
+     <td class="table_td_title">其中：一般公共预算</td>
+     <td class='caiwu_num'>342.00</td>
+     <td class='caiwu_num'>546.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+  </tr>
+  <tr class="table_td_title">
+     <td>&nbsp; &nbsp;  &nbsp; &nbsp;政府性基金预算</td>
+     <td class='caiwu_num'>454.00</td>
+     <td class='caiwu_num'>423.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+  </tr>
+  <tr class="table_td_title">
+     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 国有资本经营预算</td>
+     <td class='caiwu_num'>233.00</td>
+     <td class='caiwu_num'>456.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+  </tr>
+  
+</table>
+				
+				
+				</div>
+
+				<div class="mainlist_table displayno">
+<table width="100%" class="mainlist_table_table">
+  <tr>
+    <td rowspan="2" width="200" class="table_duijiaoxian" >
+    	
+										<b>项目</b>
+										
+										<em>科目</em>	</td>
+    <th colspan="5">收  入（查阅区本级）</th>
+    <th colspan="5">支  出（查阅区本级）</th>
+  </tr>
+    <tr>
+    <th class="table_th">2018年累计执行<br />
+     数较上年</th>
+     <th class="table_th">2017年决算<br />
+     较上年</th>
+     <th class="table_th">2016年决算<br />
+     较上年</th>
+     <th class="table_th">2015年决算<br />
+     较上年</th>
+     <th class="table_th">2014年决算<br />
+     较上年</th>
+     <th class="table_th">2018年累计<br />
+     执行数较上年</th>
+     <th class="table_th">2017年决算<br />
+     较上年</th>
+     <th class="table_th">2016年决算<br />
+     较上年</th>
+     <th class="table_th">2015年决算<br />
+     较上年</th>
+     <th class="table_th">2014年决算<br />
+     较上年</th>
+  </tr>
+   <tr class="heji_tr">
+     <td>合    计</td>
+     <td class='caiwu_num'>1,029.00</td>
+     <td class='caiwu_num'>1,425.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+     <td class='caiwu_num'>666.00</td>
+  </tr>
+  <tr>
+     <td class="table_td_title">其中：一般公共预算</td>
+     <td class='caiwu_num'>342.00</td>
+     <td class='caiwu_num'>546.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+     <td class='caiwu_num'>111.00</td>
+  </tr>
+  <tr class="table_td_title">
+     <td>&nbsp; &nbsp;  &nbsp; &nbsp;政府性基金预算</td>
+     <td class='caiwu_num'>454.00</td>
+     <td class='caiwu_num'>423.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+     <td class='caiwu_num'>222.00</td>
+  </tr>
+  <tr class="table_td_title">
+     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 国有资本经营预算</td>
+     <td class='caiwu_num'>233.00</td>
+     <td class='caiwu_num'>456.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+     <td class='caiwu_num'>333.00</td>
+  </tr>  
+</table>
+				
+				</div>
+				<div class="mainlist_table displayno">
+<table width="100%" class="mainlist_table_table">
+  <tr>
+    <td rowspan="2" width="200" class="table_duijiaoxian" >
+    	
+										<b>项目</b>
+										
+										<em>科目</em>	</td>
+    <th colspan="5">收  入（查阅区本级）</th>
+    <th colspan="5">支  出（查阅区本级）</th>
+  </tr>
+    <tr>
+    <th class="table_th">2018年预算较<br>2017年预算</th>
+	<th class="table_th">2018年预算较<br>
+    2017年决算</th>
+    <th class="table_th">&nbsp;预算调整幅度<br>（较年初预算）</th>
+	<th class="table_th">	累计执行率 <br> （较年初预算）</th>
+		<th class="table_th">累计执行率  <br>  （较调整后预算）</th>
+		<th class="table_th">	2018年预算较<br>2017年预算	</th>
+		<th class="table_th">2018年预算较<br>2017年决算	</th>
+		<th class="table_th">预算调整幅度<br>（较年初预算）</th>
+			<th class="table_th">累计执行率 <br> （较年初预算）</th>
+			<th class="table_th">	累计执行率  <br>  （较调整后预算）</th>
+  </tr>
+  <tr class="heji_tr">
+     <td>合    计</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+     <td class='caiwu_num'>66.00</td>
+  </tr>
+  <tr>
+     <td class="table_td_title">其中：一般公共预算</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+     <td class='caiwu_num'>11.00</td>
+  </tr>
+  <tr class="table_td_title">
+     <td>&nbsp; &nbsp;  &nbsp; &nbsp;政府性基金预算</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+     <td class='caiwu_num'>22.00</td>
+  </tr>
+  <tr class="table_td_title">
+     <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 国有资本经营预算</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+     <td class='caiwu_num'>33.00</td>
+  </tr>
+  
+</table>
+
+				</div>
+				
+				<!--ech  div1-->
+			<div class="mainlist_table displayno">
+					<div class="mainlist_table_echbox">
+						<div class="echbox_title_nav">
+							<span class="active fs16">收入</span>
+							<span class="fs16">支出</span>
+						</div>
+						<div class="echbox_inforbox" id="echbox_inforbox_1">
+							
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<!--ech   div2-->
+			<div class="mainlist_table displayno">
+					<div class="mainlist_table_echbox pt0">
+						<div class="echbox_title_nav">
+							<a class="fs16">2018年预算数</a>
+							<a class="fs16 active">调整预算 （+-额）</a>
+							<a class="fs16">调整后预算</a>
+							<a class="fs16">累计执行数</a>
+							<a class="fs16">2017年决算</a>
+							
+											
+						</div>
+						<div class="echbox_inforbox_tow"   id="echbox_inforbox_2">
+							<div class="hfdiv" id="echbox_inforbox_2_1"></div>
+							
+							<div  class="hfdiv" id="echbox_inforbox_2_2"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<!--ech  div3-->
+			<div class="mainlist_table displayno">
+					<div class="mainlist_table_echbox">
+						<div class="echbox_title_nav">
+							<span class="active fs16">收入</span>
+							<span class="fs16">支出</span>
+						</div>
+						<div class="echbox_inforbox" id="echbox_inforbox_3">
+							
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				<!--ech  div4-->
+			<div class="mainlist_table displayno">
+					<div class="mainlist_table_echbox">
+						<div class="echbox_title_nav">
+							<span class="active fs16">收入</span>
+							<span class="fs16">支出</span>
+						</div>
+						<div class="echbox_inforbox" id="echbox_inforbox_4">
+							
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+         
+          
+      </div>
+    </div>
+    <!-- 弹出层 -->
+	<div class="webpopbg"></div>
+	<div class="my_aq_popbox" >
+		<div class="my_aq_popbox_title">
+			<span class="white fs18">我要提问</span> 
+			<i class="iconfont icon-guanbi" id="mydq_close"></i>
+		</div>
+		<div class="my_aq_inputbox">
+			<ul>
+				<li><div class="my_aq_biaoji fs18" datamy-bj='1' title="点击选择具体数据"><i class="iconfont icon-wuxing"></i> 选择具体数据</div></li>
+				<li><span class="title fs16">提出人：</span><input type="text" value="陈峻" disabled="disabled" name="" class="myaq_input" /></li>
+				<li><span class="title fs16">提出时间：</span><input type="text" name="dateTime" disabled="disabled" id="dateTime" class="myaq_input" /></li>
+				<li class="popradio"><span class="title fs16">类型：</span>
+					<label class="fs16"><i class="iconfont icon-radio active"></i>意见</label>
+					<label class="fs16"><i class="iconfont icon-radio"></i>建议</label>
+					<label class="fs16"><i class="iconfont icon-radio"></i>问题</label>
+					
+				</li>
+				<li  class="popradio"><span class="title fs16">发布类型：</span>
+					<label class="fs16"><i class="iconfont icon-radio active"></i>公开</label>
+					<label class="fs16"><i class="iconfont icon-radio"></i>不公开</label>
+				</li>
+				
+				<li class="popradio" id="pop_list_li"><span class="title fs16">答复单位：</span>
+					
+       				    <div class="myaq_input bg" id="myaq_input">区财政</div>
+       				    <div class="woyaotiwen_bumen_list hide" >
+       				    	<div class="woyaotiwen_bumen_listbox">
+       				    	<ul class="secondary_list_pop_ul">
+          					
+                 			<li class="s_l_p_li" style=" border-top: 1px solid #f0f0f0;"><div class="landian"></div><a class="s_l_p_li_a fs14">区委部门 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							<li class="fs14">区纪委监委</li>
+          							<li class="fs14">区委办</li>
+          							<li class="fs14">区政策研究室</li>
+          							<li class="fs14">区组织部</li>
+          							<li class="fs14">区宣传部</li>
+          							<li class="fs14">区统战部</li>
+          							<li class="fs14">区民主党派</li>
+          							<li class="fs14">区政法委</li>
+          							<li class="fs14">区级机关工委</li>
+          							<li class="fs14">区编委办</li>
+          							<li class="fs14">区610办公室</li>
+          							<li class="fs14">区信访办</li>
+          							<li class="fs14">区档案局</li>
+          							<li class="fs14">区老干部局</li>
+          							<li class="fs14">区社建委社建办</li>
+          							<li class="fs14">区综合党委</li>
+          							<li class="fs14">区总工会</li>
+          							<li class="fs14">区团委</li>
+          							<li class="fs14">区妇联</li>
+          							<li class="fs14">区工商联</li>
+          							<li class="fs14">区党校</li>
+          							<li class="fs14">区党史研究室</li>
+          							<li class="fs14">区文明办</li>
+          							<li class="fs14">区报社</li>
+          							<li class="fs14">区门户网站管理中心</li>
+          							<li class="fs14">区保密局</li>
+         						</ul>
+          					</li>
+          					<li class="s_l_p_li"><div class="landian"></div><a class="s_l_p_li_a fs14">区人大部门</a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							<li class="fs14">区人大办</li>
+          							<li class="fs14">法制委员会、内务司法委员会</li>
+    <li class="fs14">财政经济委员会、农业与农村委员会</li>
+    <li class="fs14">预算工作委员会</li>
+    <li class="fs14">教育科学文化卫生工作委员会</li>
+    <li class="fs14">城市建设环境保护工作委员会</li>
+   <li class="fs14"> 人事工作委员会、代表工作委员会</li>
+   <li class="fs14"> 华侨民族宗教事务工作委员会</li>
+    <li class="fs14">办公室</li>
+    <li class="fs14">研究室</li>
+         						</ul>
+       						</li>
+       						<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">区政府部门 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							<li>区府办</li>
+          							<li>区发改委</li>
+          							<li>区经委</li>
+          							<li>区科委</li>
+          							<li>区卫生计生委</li>
+          							<li>区建管委</li>
+          							<li>区交通委</li>
+          							<li>区农委</li>
+          							<li>区国资委</li>
+          							<li>区公安分局</li>
+          							<li>区司法局</li>
+          							<li>区人社局</li>
+          							<li>区民政局</li>
+          							<li>区财政局</li>
+          							<li>区审计局</li>
+          							<li>区统计局</li>
+          							<li>区教育局</li>
+          							<li>区市场监管局</li>
+          							<li>区文广局</li>
+          							<li>区体育局</li>
+          							<li>区环保局</li>
+          							<li>区规土局</li>
+          							<li>区房管局</li>
+          							<li>区绿化市容局</li>
+          							<li>区城市管理行政执法局</li>
+          							<li>区税务局</li>
+          							<li>区安监局</li>
+          							<li>区民防办</li>
+          							<li>区合作交流办</li>
+          							<li>区机管局</li>
+          							<li>区税务分局</li>
+          						</ul>
+       						</li>
+       						<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">区政协部门 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							<li class="fs14">区政协办</li>
+         						</ul>
+       						</li>
+          					<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">区法院 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							
+         						</ul>
+       						</li>
+       						
+       						<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">区检察院 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							
+         						</ul>
+       						</li>
+       						<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">区人武部 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							
+         						</ul>
+       						</li>
+       						<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">街道 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							<li class="fs14">江川街道</li>
+          							<li class="fs14">新虹街道</li>
+          							<li class="fs14">古美街道</li>
+          							<li class="fs14">浦锦街道</li>
+          							
+         						</ul>
+       						</li>
+
+  							<li class="s_l_p_li"><div class="landian"></div>
+       							<a class="s_l_p_li_a fs14">人民团体 </a><img src="img/sj.png">
+          						<ul class="sec_small_ul">
+          							<li class="fs14">区侨联</li>
+          							<li class="fs14">区残联</li>
+          							<li class="fs14">区红十字会</li>
+          						</ul>
+       						</li>
+        				</ul>
+			    
+       				    	</div>
+       				    </div>
+					</li>
+				<li><span class="title fs16">附件：</span><input type="text" name="" class="myaq_input" /> <img class="myaq_up" src="img/my_aq_up.jpg" /></li>
+				<li><span class="title fs16">具体内容：</span><textarea name="textarea" class="my_eq_text"></textarea></li>
+				<li><span class="title fs16">&nbsp;</span>
+					<button class="submit_my_aq fs16">提交</button>
+					<button class="baocun_my_aq fs16">保存</button>
+				</li>
+			</ul>
+
+
+
+
+
+
+			
+		</div>
+		
+		
+	</div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!--范围-->
+    <script type="text/javascript" src="js/ion.rangeSlider.js"></script> 
+    
+   <script type="text/javascript" src="js/wow.min.js"></script>
+	<script type="text/javascript" src="js/web.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/news.js"></script>
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+
+	<script type="text/javascript">
+        $('.date-picker').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        })
+    </script>
+
+	<script>
+		getNowFormatDate()
+		function getNowFormatDate() {
+	        var date = new Date();
+	        var seperator1 = "-";
+	        var year = date.getFullYear();
+	        var month = date.getMonth() + 1;
+	        var strDate = date.getDate();
+	        if (month >= 1 && month <= 9) {
+	            month = "0" + month;
+	        }
+	        if (strDate >= 0 && strDate <= 9) {
+	            strDate = "0" + strDate;
+	        }
+	         currentdate = year + seperator1 + month + seperator1 + strDate;
+	       $("#dateTime").val(currentdate);
+	    }
+		$(function(){
+			//搜索
+			
+			$(".search_an").click(function(){
+				num = 0
+				$("#search_liebiao").html('');
+				$(".xuanzes").each(function(i){
+					if($(this).hasClass("active")){
+						num+=1;
+					}
+				})
+				if(num<1){
+					//alert('最少要选择一个查询条件');
+					$(".search_list_1,.search_list_2,.search_list_3").show();
+					return false;
+				}
+				$(".search_list_1,.search_list_2,.search_list_3").hide();
+				$(".xuanzes").each(function(i){
+					if($(this).hasClass("active")){
+						this_html=$(this).html()
+						dataid=$(this).attr('data-id');
+						$(".search_list_"+dataid).show();
+					
+						str='<li>'+this_html+' <i class="iconfont icon-icon_colse_b guanbi" data-id="'+dataid+'"></i></li>'
+	                	$("#search_liebiao").append(str);
+					}
+					
+				})
+				//关闭搜索函数
+				search_close();
+			})
+			function show_hang(){
+				
+				$(".search_list_1,.search_list_2,.search_list_3").show();
+				
+			}
+			
+			function search_close(){
+				$(".guanbi").click(function(){
+					id=$(this).attr('data-id');
+					nums=$("#search_liebiao>li").length;
+				
+					if(nums>1){
+						$(".search_list_"+id).hide();
+					}else{
+						show_hang()	
+					}
+					$(this).parents('li').remove();
+					
+					$(".xuanzes").each(function(){
+					
+						if($(this).attr("data-id")==id){
+							$(this).removeClass("active")
+						}
+					
+						
+					})
+				})
+				
+				$("#qingchu").click(function(){
+					$("#search_liebiao>li").remove();
+					$(".xuanzes").removeClass("active")
+					show_hang();
+				})
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			$(".xuanzes").click(function(){
+				if($(this).hasClass("active")){
+					$(this).removeClass("active")
+					
+				}else{
+					
+					$(this).addClass("active")
+				}
+				
+			})
+			
+			
+			// class="tubiao tubiao_li active"
+				
+			function  table_list_display(num){
+				$(".sup_danwei_pop>span").removeClass("active")
+				$(".mainlist_table").addClass("displayno")
+				
+				$(".mainlist_table").eq(num).removeClass("displayno")
+				
+				if(num>0){
+					$(".main_nav_right").hide()
+				}else{
+				$(".main_nav_right").show()	
+					
+				}
+				
+				if(num<4){
+					$(".sup_danwei_pop>span").eq(num).addClass("active")
+				}else{
+					each_jiazai();
+				}
+				
+			}
+			
+			$(".tubiao_li").click(function(){
+				ida=$(".tubiao_li").index(this);
+				tubiao_li_id=0;
+				$(".tableNav").each(function(i){
+					if($(this).hasClass('active')){
+						tubiao_li_id=i;
+					}
+				})
+				
+				//全部隐藏
+				$(".tubiao_li").removeClass("active")
+				$(this).addClass("active");
+				t_l=$(".tableNav").length;
+
+				//打开当前
+				num= ida*t_l+tubiao_li_id;
+				table_list_display(num);
+			})
+			
+			$(".tableNav").click(function(){
+				ida=$(".tableNav").index(this);
+				tubiao_li_id=0;
+				$(".tubiao_li").each(function(i){
+					if($(this).hasClass('active')){
+						tubiao_li_id=i;
+					}
+				})
+				
+				//全部隐藏
+				$(".tableNav").removeClass("active")
+				$(this).addClass("active")
+				t_l=$(".tableNav").length;
+				//打开当前
+				num= tubiao_li_id*t_l+ida;
+				table_list_display(num)
+				
+			})
+			
+			
+			function webpop_dingwei(classname){
+				wh=$(window).height();
+				ch=$('.'+classname).height();
+				$('.'+classname).css({"top":(wh-ch)/2})
+			}
+			//打开弹出层
+			$("#woyaotiwen").click(function(){
+				$(".webpopbg,.my_aq_popbox").show()
+				webpop_dingwei('my_aq_popbox');
+				
+			})
+			//关闭弹出层
+			$("#mydq_close").click(function(){
+				$(".webpopbg,.my_aq_popbox").hide();
+				$(".allbox").removeClass('myaq_biaoji_qingchu').attr("data-biaoji","0");
+				$(".yidingnrong>ul>li").removeClass('act_biaoji')
+				$(".woyaotiwen_bumen_list").addClass("hide")
+			})
+//			<div  class="allbox myaq_biaoji_qingchu" data-biaoji="1"> 
+			//标记
+			$('.my_aq_biaoji').click(function(){
+				$(".webpopbg,.my_aq_popbox,.mainlistnav").hide();
+				
+				$(".yijianxuanze_box").show();
+				
+				$(".allbox").addClass('myaq_biaoji_qingchu').attr("data-biaoji","2")
+			})
+			$(".yidingnrong>ul>li").click(function(){
+				
+				biaoji=$('.allbox').attr('data-biaoji')
+				if(biaoji<2){ return false;	}
+				is_hav=$(this).hasClass("act_biaoji");
+				if(is_hav){
+					$(this).removeClass("act_biaoji");
+				}else{
+					
+					$(this).addClass("act_biaoji");	
+				}
+				
+			})
+//			完成标记     
+			$("#wanchbiaoji").click(function(){
+				
+				$(".webpopbg,.my_aq_popbox").show()
+				webpop_dingwei('my_aq_popbox');
+				$(".my_aq_biaoji").attr('datamy-bj',2)
+				
+			})
+			//
+			$(".icon-radio").click(function(){
+				obj=$(this).parents('.popradio');
+				obj.find(".icon-radio").removeClass("active");
+				$(this).addClass("active");
+			})
+			
+			$(".submit_my_aq").click(function(){
+				$(".webpopbg,.my_aq_popbox").hide()
+				$(".allbox").removeClass('myaq_biaoji_qingchu').attr("data-biaoji","0");
+				$(".yidingnrong>ul>li").removeClass('act_biaoji')
+				
+				$(".yijianxuanze_box").hide();
+				$(".mainlistnav").show();
+			})
+			//ech list
+			$(".echbox_title_nav>span").click(function(){
+				thisdiv=$(this).parents('.echbox_title_nav');
+				this_id= thisdiv.find('span').index(this);
+				thisdiv.find('span').removeClass('active')
+				$(this).addClass('active')
+			})
+			
+			$(".s_l_p_li").click(function(){
+				$(".s_l_p_li").removeClass('active')
+				$(this).addClass('active')
+				listpop()
+			})
+			
+			
+			//弹出层
+			
+			function listpop(){
+				wh=$(".secondary_list_pop_ul").height()
+				$(".sec_small_ul").css({'height':wh})
+			}
+			
+			$("#myaq_input").click(function(){
+				$(".woyaotiwen_bumen_list").removeClass("hide")
+				$('.s_l_p_li').eq(0).addClass('active')
+			})
+			
+			$("#pop_list_li").hover(
+				function(){
+				},
+				function(){
+				$(".woyaotiwen_bumen_list").addClass("hide")
+				//$('.s_l_p_li').eq(0).addClass('active')
+				
+			})
+			
+			
+			$(".sec_small_ul>li").click(function(){
+				title=$(this).html();
+				$("#myaq_input").html(title)
+				$(".woyaotiwen_bumen_list").addClass("hide")
+			})
+			
+			
+		})
+		
+		
+	</script>
+ 	<script src="js/echarts.min.js"></script>
+  	<script  src="ech.js" type="text/javascript"></script>
+ 	
+ <script>$("#leftNav_1").addClass("active");</script>	
+</body>
+
+
+</html>

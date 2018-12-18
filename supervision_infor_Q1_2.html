@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.jq22.com/demo/web20160509/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2016 07:41:49 GMT -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>闵行区人大</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+
+    <link href="css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="http://at.alicdn.com/t/font_684601_z2tyakglw1b.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.min.css" />
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bacs.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet" />
+    <link href="css/css1.css" rel="stylesheet" />
+    <style>
+        @media only screen and (min-width: 641px) {
+            .am-modal {
+                width: 800px;
+                margin-left: -375px;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="pace-done">
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <script src="left.js"></script>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="webtop_head">
+                <script src="head.js"></script>
+            </div>
+            <div class="webnavhover">
+				 <span  class="active_top">审查监督 <i class="iconfont icon-icon_colse_b "></i></span>
+				 <span class="active">预算账册<i class="iconfont icon-icon_colse_b "></i></span>
+			</div>
+			
+            <div class="mainInforbox">
+                <div class="websearchbox b_b_x">
+                    <div class="websearchbox_li">
+                        <span>年份：</span>
+                        <label>
+                            <input class="form-control dateimg" type="text" id="listdata_year" placeholder="请选择">
+
+                        </label>
+                    </div>
+                    <div class="websearchbox_li no">
+                        <span class="fl">资金性质：</span>
+                        <label class="xuanzes fs16" data-id='1'>一般公共预算</label>
+                        <label class="xuanzes fs16" data-id='2'>政府性基金预算</label>
+                        <label class="xuanzes fs16" data-id='3'>国有资本经营预算</label>
+                    </div>
+                    <div class="search_an">查询</div>
+                </div>
+                <div class="top_bottom b_b_x">
+                    <span class="bot_p fs16 fwb">已选条件</span>
+                    <ul class="bot_ul clearfix">
+                        <!--<li>上海市 <i class="iconfont icon-icon_colse_b guanbi"></i></li>
+	                  <li>浦东新区 <i class="iconfont icon-icon_colse_b guanbi"></i></li>-->
+                    </ul>
+                    <div class="qingchu">
+                        <i class="iconfont icon-lajitong"></i> 清除全部</div>
+                </div>
+                <div class="top_bottom b_b_x">
+                    <span class="bot_p fs16 fwb">已隐藏操作列</span>
+                    <ul class="bot_ul clearfix" id="yincanliebiao">
+                    </ul>
+                    <div class="qingchu2">
+                        <i class="iconfont icon-lajitong"></i> 清除全部</div>
+                </div>
+                <div class="sup_infor_title fs26">闵行区××部门离退休人员结构表
+
+                    <div class="sup_danwei_pop">
+                        <span class="active">单位：人</span>
+                        <span>单位：%</span>
+                        <span>单位：±%</span>
+                        <span>单位：±%</span>
+                    </div>
+                </div>
+                <div class="mainlistnav">
+                    <ul class="main_nav_left">
+                        <li class="tableNav active">
+                            <i class="iconfont icon-shuju"></i>数据</li>
+                        <li class="tableNav">
+                            <i class="iconfont icon-shujushixin"></i>结构</li>
+                        <li class="tableNav">
+                            <i class="iconfont icon-shuju2">趋势</i>
+                        </li>
+                        <li class="tableNav">
+                            <i class="iconfont icon-shuju1"></i>比率</li>
+                        <li class="tubiao tubiao_li active" data-id='0'>
+                            <i class="iconfont icon-table"></i>表</li>
+                        <li class="tubiao_li" data-id='1'>
+                            <i class="iconfont icon-shuju1"></i>图</li>
+                    </ul>
+
+                    <ul class="main_nav_right">
+
+                        <li id="woyaotiwen">
+                            <i class="iconfont icon-shenhebijijishibenxiezi"></i>
+                            <span>我要提问</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="yijianxuanze_box fs16">
+                    <i class="iconfont icon-zhuyi"></i> 提示：请点击问题数据
+                    <span class="shou anniu" id="wanchbiaoji">完成选择</span>
+                </div>
+                <div class="clearbox"></div>
+
+
+
+                <div class="mainlist_table">
+                   <table width="100%" class="mainlist_table_table">
+                       <tr>
+                           <td rowspan="1" width="200" class="table_duijiaoxian">
+                               <div style="width: 100%; height: 100%; min-height: 100px; ">
+                                   <b>单位</b>
+                   
+                                   <em>分类</em>
+                               </div>
+                               </td>
+                   
+                           <th colspan="1">
+                               ××部门
+                           </th>
+                   
+                           <th colspan="1">
+                               下属单位A
+                           </th>
+                           <th colspan="1">
+                               ××部门
+                           </th>
+                   
+                           <th colspan="1">
+                               下属单位A
+                           </th>
+                           <th colspan="1">
+                               下属单位B
+                           </th>
+                           <th colspan="1">
+                               下属单位C
+                           </th>
+                           <th rowspan="1">
+                               …
+                           </th>
+                           <th rowspan="1">
+                               小计
+                           </th>
+                       </tr>
+                       <tr class="feedback_ck heji_tr">
+                           <td >小   计</td>
+                           <td class='caiwu_num'>684</td>
+                           <td class='caiwu_num'>1,092</td>
+                           <td class='caiwu_num'>684</td>
+                           <td class='caiwu_num'>1,092</td>
+                           <td class='caiwu_num'>684</td>
+                           <td class='caiwu_num'>1,092</td>
+                           <td class='caiwu_num'>684</td>
+                           <td class='caiwu_num'>5,604</td>
+                       </tr>
+                       <tr class="feedback_ck">
+                           <td class='table_td_title'>离休人员</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>546</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>546</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>2,802</td>
+                       </tr>
+                       <tr class="feedback_ck">
+                           <td class='table_td_title'>退休人员</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>546</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>546</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>342</td>
+                           <td class='caiwu_num'>2,802</td>
+                       </tr>
+                   </table>
+                   
+                </div>
+
+
+
+
+                <div class="mainlist_table displayno">
+                    <table width="100%" class="mainlist_table_table">
+                        <tr>
+                            <td rowspan="2" width="200" class="table_duijiaoxian">
+
+                                <b>项目</b>
+
+                                <em>科目</em>
+                            </td>
+                            <th colspan="5">收 入（查阅区本级）</th>
+                            <th colspan="5">支 出（查阅区本级）</th>
+                        </tr>
+                        <tr>
+                            <th class="table_th">2018年预算数</th>
+                            <th class="table_th">调整预算 （+-额）</th>
+                            <th class="table_th">调整后预算</th>
+                            <th class="table_th">累计执行数</th>
+                            <th class="table_th">2017年决算</th>
+                            <th class="table_th">2018年预算数 </th>
+
+                            <th class="table_th">调整预算 （+-额）</th>
+                            <th class="table_th">调整后预算 </th>
+                            <th class="table_th">累计执行数</th>
+                            <th class="table_th">2017年决算</th>
+                        </tr>
+                        <tr>
+                            <td>合    计</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                        </tr>
+                        <tr>
+                            <td>其中：一般公共预算</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                        </tr>
+                        <tr>
+                            <td>政府性基金预算</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                        </tr>
+                        <tr>
+                            <td> 国有资本经营预算</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div class="mainlist_table displayno">
+                    <table width="100%" class="mainlist_table_table">
+                        <tr>
+                            <td rowspan="2" width="200" class="table_duijiaoxian">
+
+                                <b>项目</b>
+
+                                <em>科目</em>
+                            </td>
+                            <th colspan="5">收 入（查阅区本级）</th>
+                            <th colspan="5">支 出（查阅区本级）</th>
+                        </tr>
+                        <tr>
+                            <th class="table_th">2018年预算较
+                                <br>2017年预算</th>
+                            <th class="table_th">2018年预算较
+                                <br> 2017年决算
+                            </th>
+                            <th class="table_th">&nbsp;预算调整幅度
+                                <br>（较年初预算）</th>
+                            <th class="table_th"> 累计执行率
+                                <br> （较年初预算）</th>
+                            <th class="table_th">累计执行率
+                                <br> （较调整后预算）</th>
+                            <th class="table_th"> 2018年预算较
+                                <br>2017年预算 </th>
+                            <th class="table_th">2018年预算较
+                                <br>2017年决算 </th>
+                            <th class="table_th">预算调整幅度
+                                <br>（较年初预算）</th>
+                            <th class="table_th">累计执行率
+                                <br> （较年初预算）</th>
+                            <th class="table_th"> 累计执行率
+                                <br> （较调整后预算）</th>
+                        </tr>
+                        <tr>
+                            <td>合    计</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                        </tr>
+                        <tr>
+                            <td>其中：一般公共预算</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                        </tr>
+                        <tr>
+                            <td>政府性基金预算</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                        </tr>
+                        <tr>
+                            <td> 国有资本经营预算</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+                <div class="mainlist_table displayno">
+                    <table width="100%" class="mainlist_table_table">
+                        <tr>
+                            <td rowspan="2" width="200" class="table_duijiaoxian">
+
+                                <b>项目</b>
+
+                                <em>科目</em>
+                            </td>
+                            <th colspan="5">收 入（查阅区本级）</th>
+                            <th colspan="5">支 出（查阅区本级）</th>
+                        </tr>
+                        <tr>
+                            <th class="table_th">2018年累计执行
+                                <br /> 数较上年
+                            </th>
+                            <th class="table_th">2017年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2016年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2015年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2014年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2018年累计
+                                <br /> 执行数较上年
+                            </th>
+                            <th class="table_th">2017年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2016年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2015年决算
+                                <br /> 较上年
+                            </th>
+                            <th class="table_th">2014年决算
+                                <br /> 较上年
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>合    计</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                            <td>323</td>
+                            <td>434</td>
+                        </tr>
+                        <tr>
+                            <td>其中：一般公共预算</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                            <td>342</td>
+                            <td>546</td>
+                        </tr>
+                        <tr>
+                            <td>政府性基金预算</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                            <td>454</td>
+                            <td>423</td>
+                        </tr>
+                        <tr>
+                            <td> 国有资本经营预算</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                            <td>233</td>
+                            <td>456</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <!--ech  div1-->
+                <div class="mainlist_table displayno">
+                    <div class="mainlist_table_echbox">
+                        <div class="echbox_title_nav">
+                            <span class="active fs16">收入</span>
+                            <span class="fs16">支出</span>
+                        </div>
+                        <div class="echbox_inforbox" id="echbox_inforbox_1">
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--ech   div2-->
+                <div class="mainlist_table displayno">
+                    <div class="mainlist_table_echbox pt0">
+                        <div class="echbox_title_nav">
+                            <a class="fs16">2014年决算比较上年</a>
+                            <a class="fs16 active">2015年决算比较上年</a>
+                            <a class="fs16">2016年决算比较上年</a>
+                            <a class="fs16">2017年决算比较上年</a>
+                            <a class="fs16">2018年决算比较上年</a>
+                        </div>
+                        <div class="echbox_inforbox_tow" id="echbox_inforbox_2">
+                            <div class="hfdiv" id="echbox_inforbox_2_1"></div>
+
+                            <div class="hfdiv" id="echbox_inforbox_2_2"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--ech  div3-->
+                <div class="mainlist_table displayno">
+                    <div class="mainlist_table_echbox">
+                        <div class="echbox_title_nav">
+                            <span class="active fs16">收入</span>
+                            <span class="fs16">支出</span>
+                        </div>
+                        <div class="echbox_inforbox" id="echbox_inforbox_3">
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--ech  div4-->
+                <div class="mainlist_table displayno">
+                    <div class="mainlist_table_echbox">
+                        <div class="echbox_title_nav">
+                            <span class="active fs16">收入</span>
+                            <span class="fs16">支出</span>
+                        </div>
+                        <div class="echbox_inforbox" id="echbox_inforbox_4">
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 弹出层 -->
+    <div class="webpopbg"></div>
+    <div class="my_aq_popbox">
+        <div class="my_aq_popbox_title">
+            <span class="white fs18">我要提问</span>
+            <i class="iconfont icon-guanbi" id="mydq_close"></i>
+        </div>
+        <div class="my_aq_inputbox">
+            <ul>
+                <li>
+                    <div class="my_aq_biaoji fs18" datamy-bj='1' title="点击选择具体数据">
+                        <i class="iconfont icon-wuxing"></i> 选择具体数据</div>
+                </li>
+                <li>
+                    <span class="title fs16">提出人：</span>
+                    <input type="text" name="" class="myaq_input" />
+                </li>
+                <li>
+                    <span class="title fs16">提出时间：</span>
+                    <input type="text" name="" class="myaq_input" />
+                </li>
+                <li class="popradio">
+                    <span class="title fs16">类型：</span>
+                    <label class="fs16">
+                        <i class="iconfont icon-radio active"></i>意见</label>
+                    <label class="fs16">
+                        <i class="iconfont icon-radio"></i>建议</label>
+                    <label class="fs16">
+                        <i class="iconfont icon-radio"></i>问题</label>
+
+                </li>
+                <li class="popradio">
+                    <span class="title fs16">发布类型：</span>
+                    <label class="fs16">
+                        <i class="iconfont icon-radio"></i>公开</label>
+                    <label class="fs16">
+                        <i class="iconfont icon-radio"></i>秘密</label>
+                </li>
+
+                <li class="popradio">
+                    <span class="title fs16">答复单位：</span>
+                    <select name="select" class="myaq_input">
+                        <option value="">请选择</option>
+
+                    </select>
+                </li>
+                <li>
+                    <span class="title fs16">附件：</span>
+                    <input type="text" name="" class="myaq_input" />
+                    <img class="myaq_up" src="img/my_aq_up.jpg" />
+                </li>
+                <li>
+                    <span class="title fs16">具体内容：</span>
+                    <textarea name="textarea" class="my_eq_text"></textarea>
+                </li>
+                <li>
+                    <span class="title fs16">&nbsp;</span>
+                    <button class="submit_my_aq fs16">提交</button>
+                    <button class="baocun_my_aq fs16">保存</button>
+                </li>
+            </ul>
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!--范围-->
+    <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/web.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/news.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+
+    <script type="text/javascript">
+        $('.date-picker').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        })
+    </script>
+
+ <script>$("#leftNav_1").addClass("active");</script>	
+</body>
+
+
+</html>

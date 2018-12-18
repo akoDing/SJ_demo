@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.jq22.com/demo/web20160509/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2016 07:41:49 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>闵行区人大</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="http://at.alicdn.com/t/font_684601_z2tyakglw1b.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="css/normalize.min.css" />
+  
+  
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bacs.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet" />
+    <style>
+      @media only screen and (min-width: 641px){
+        .am-modal {
+          width: 750px;
+          margin-left: -375px;
+        }
+      }
+        
+    </style>
+
+</head>
+
+<body class="pace-done">
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+          <script src="left.js"></script>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+      <div class="webtop_head">
+        <script src="head.js"></script>
+      </div>
+      <div class="supervision_nav">
+      	 <a href="red_alert.html?num=1">
+        <div class="supervision_nav_div yuanjiao_da yj1">
+                <div class="supervision_nav_div_icobox">
+                  <div class="supervision_nav_div_ico iconfont icon-weibiaoti1"></div>
+                </div>  
+                <ul class="supervision_nav_div_ul">
+                  <li class="title fs20">红色预警</li>
+                  <li><span class="fs50 fl">128</span><span class="fs20 fl">个</span></li>
+                </ul>
+               <div class="supervision_nav_sanjiao iconfont icon-jiantou2"></div>
+              </div></a>
+        <a href="red_alert.html?num=2">
+        <div class="supervision_nav_div yuanjiao_da yj2">
+                
+                <div class="supervision_nav_div_icobox">
+                  <div class="supervision_nav_div_ico iconfont icon-weibiaoti1"></div>
+                </div>  
+                <ul class="supervision_nav_div_ul">
+                  <li class="title fs20">黄色预警</li>
+                  <li><span class="fs50 fl">68</span><span class="fs20 fl">个</span></li>
+                
+                </ul>
+                <div class="supervision_nav_sanjiao iconfont icon-jiantou2"></div>
+              </div></a>
+        
+         <a href="tishi_alert.html">
+        <div class="supervision_nav_div yuanjiao_da yj3">
+                <div class="supervision_nav_div_icobox">
+                  <div class="supervision_nav_div_ico iconfont icon-xiaoxi"></div>
+                </div>  
+                <ul class="supervision_nav_div_ul">
+                  <li class="title fs20">提示</li>
+                  <li><span class="fs50 fl">18</span><span class="fs20 fl">个</span></li>
+                </ul>
+               <div class="supervision_nav_sanjiao iconfont icon-jiantou2"></div>
+              </div></a>
+      </div>
+      <div class="supervision_mainbox yuanjiao_da mt30">
+        <div class="supervision_mainbox_title ">
+          <i class="iconfont icon-qushi"></i><span class="fs20">指标预警结果汇总</span>
+          <a href="red_alert.html?num=3" class="fs16 gengduo fr">更多</a>
+        </div>
+        <div class="superv_ech" id="superv_ech_1">
+          <div id="bar-1" class="pct100 h250"></div>
+            <div id="tip" class="tipname hide"></div>
+          
+        </div>
+      </div>
+          
+          <div class="supervision_mainbox yuanjiao_da">
+        <div class="supervision_mainbox_title">
+          <i class="iconfont icon-shuju3"></i><span class="fs20">部门预警前十结果汇总图</span>
+          <a href="red_alert.html?num=4" class="fs16 gengduo fr">更多</a>
+        </div>
+        <div class="superv_ech" id="superv_ech_2">
+          
+          
+        </div>
+      </div>
+      <div class="supervision_mainbox yuanjiao_da">
+        <div class="supervision_mainbox_title">
+          <i class="iconfont icon-bingtu"></i><span class="fs20">预警指标库</span>
+          <a href="warning_indicator.html" class="fs16 gengduo fr">更多</a>
+        </div>
+        <div class="superv_ech">
+          <div class="superv_ech_left"  id="superv_ech_3">
+          </div>
+          <div class="superv_ech_right">
+            <!--警示指标-->
+            <table width="100%" name="警示指标" class="supervTable yujing" > 
+             <tr>
+                      <th width="65">序号</th>
+                      <th width="120">预警类型</th>
+                      <th width="280">预警规则</th>
+                      <th>预警标准</th>
+                      
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>1</td>
+                <td><p class="ccddd" title="警示类">警示类</p></td>
+                <td><p class="ccddd" title="连续三年执行率较低未做调整异常">连续三年执行率较低未做调整异常</p></td>
+                <td><p class="ccddd" title="连续三年项目执行率较低的情况下仍然按...">连续三年项目执行率较低的情况下仍然按...</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>2</td>
+                <td><p class="ccddd" title="警示类">警示类</p></td>
+                <td><p class="ccddd" title="三公经费">三公经费</p></td>
+                <td><p class="ccddd" title="三公经费”不超预算5%">三公经费”不超预算5%</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>3</td>
+                <td><p class="ccddd" title="警示类">警示类</p></td>
+                <td><p class="ccddd" title="超预算或无预算安排支出">超预算或无预算安排支出</p></td>
+                <td><p class="ccddd" title="超年初预算和调整预算支出的为二级预警...">超年初预算和调整预算支出的为二级预警...</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>4</td>
+                <td><p class="ccddd" title="警示类">警示类</p></td>
+                <td><p class="ccddd" title="总预算支出进度缓慢">总预算支出进度缓慢</p></td>
+                <td><p class="ccddd" title="预算支出进度缓慢，低于时间进度。总预算支出..">预算支出进度缓慢，低于时间进度。总预算支出..</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>5</td>
+                <td><p class="ccddd" title="警示类">警示类</p></td>
+                <td><p class="ccddd" title="项目经费执行进度异常">项目经费执行进度异常</p></td>
+                <td><p class="ccddd" title="项目经费执行进度异常，低于预算进度，项目经费执行..">项目经费执行进度异常，低于预算进度，项目经费执行..</p></td>
+               
+             </tr> 
+          </table>
+            <!--提示指标-->     
+            <table width="100%" name="提示指标" class="supervTable tishi"> 
+               <tr>
+                        <th width="65">序号</th>
+                      <th width="120">预警类型</th>
+                      <th width="280">预警规则</th>
+                        <th width="440px">预警标准</th>
+                        
+               </tr> 
+               <tr class="feedback_ck" >
+                  <td>1</td>
+                  <td><p class="ccddd" title="提示类">提示类</p></td>
+                  <td><p class="ccddd" title="总预算变动异常预警">总预算变动异常预警</p></td>
+                  <td><p class="ccddd" title="总预算收入增长异常，幅度较大。收入增长幅度超过10%-20%为三级预警，超过20%以上为二级预警。总预算收入下降异常，幅度较大。收入下降幅度超过5%-10%为二级预警，超过10%以上为一级预警。">总预算收入增长异常，幅度较大。收入增长幅度超过10%-20%为三级预警，超过20%以上为二级预警。总预算收入下降异常，幅度较大。收入下降幅度超过5%-10%为二级预警，超过10%以上为一级预警。</p></td>
+                 
+               </tr> 
+               <tr class="feedback_ck" >
+                  <td>2</td>
+                  <td><p class="ccddd" title="提示类">提示类</p></td>
+                  <td><p class="ccddd" title="总预算收入结构异常">总预算收入结构异常</p></td>
+                  <td><p class="ccddd" title="总预算收入结构异常，税收支出占比较低。税收支出占比低于60%-70%为三级预警，低于60%以上为二级预警。">总预算收入结构异常，税收支出占比较低。税收支出占比低于60%-70%为三级预警，低于60%以上为二级预警。</p></td>
+                 
+               </tr> 
+               <tr class="feedback_ck" >
+                  <td>3</td>
+                  <td><p class="ccddd" title="提示类">提示类</p></td>
+                  <td><p class="ccddd" title="税种变动异常">税种变动异常</p></td>
+                  <td><p class="ccddd" title="某税种增长异常，幅度较大。某税种增长幅度超过10%-20%为三级预警，超过20%-30%为二级预警，超过30%以上为一级预警。某税种下降异常，幅度较大。某税种下降幅度超过5%-10%为二级预警，超过10%以上为一级预警。">某税种增长异常，幅度较大。某税种增长幅度超过10%-20%为三级预警，超过20%-30%为二级预警，超过30%以上为一级预警。某税种下降异常，幅度较大。某税种下降幅度超过5%-10%为二级预警，超过10%以上为一级预警。</p></td>
+                 
+               </tr> 
+               <tr class="feedback_ck" >
+                  <td>4</td>
+                  <td><p class="ccddd" title="提示类">提示类</p></td>
+                  <td><p class="ccddd" title="非税变动异常">非税变动异常</p></td>
+                  <td><p class="ccddd" title="某单项非税增长异常，幅度较大。某单项非税增长幅度超过10%-20%为三级预警，超过20%-30%为二级预警，超过30%以上为一级预警。某单项非税下降异常，幅度较大。某单项非税下降幅度超过5%-10%为二级预警，超过10%以上为一级预警。">某单项非税增长异常，幅度较大。某单项非税增长幅度超过10%-20%为三级预警，超过20%-30%为二级预警，超过30%以上为一级预警。某单项非税下降异常，幅度较大。某单项非税下降幅度超过5%-10%为二级预警，超过10%以上为一级预警。</p></td>
+                 
+               </tr> 
+               <tr class="feedback_ck" >
+                  <td>5</td>
+                  <td><p class="ccddd" title="提示类">提示类</p></td>
+                  <td><p class="ccddd" title="重大项目支出进展缓慢">重大项目支出进展缓慢</p></td>
+                  <td><p class="ccddd" title="重大项目支出进展缓慢，低于预算进度，重大项目支出进度低于序时进度10%-20%为三级预警，重大项目支出进度低于序时进度20%-30%为二级预警，重大项目支出进度低于序时进度30%以上为一级预警。">重大项目支出进展缓慢，低于预算进度，重大项目支出进度低于序时进度10%-20%为三级预警，重大项目支出进度低于序时进度20%-30%为二级预警，重大项目支出进度低于序时进度30%以上为一级预警。</p></td>                
+               </tr> 
+            </table>
+            <!--备选指标-->
+            <table width="100%" name="备选指标" class="supervTable beixuan"> 
+             <tr>
+              <th width="65">序号</th>
+              <th width="120">预警类型</th>
+              <th width="280">预警规则</th>
+              <th width="440px">预警标准</th>
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>1</td>
+                <td><p class="ccddd" title="备选类">备选类</p></td>
+                <td><p class="ccddd" title="预算编制完整性">预算编制完整性</p></td>
+                <td><p class="ccddd" title="预算编制不完整，某些收、支和结转未纳入年初预算。">预算编制不完整，某些收、支和结转未纳入年初预算。</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>2</td>
+                <td><p class="ccddd" title="备选类">备选类</p></td>
+                <td><p class="ccddd" title="预算编制结构异常">预算编制结构异常</p></td>
+                <td><p class="ccddd" title="编制预算支出的结构异常，某项支出占比未达法定要求。">编制预算支出的结构异常，某项支出占比未达法定要求。</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>3</td>
+                <td><p class="ccddd" title="备选类">备选类</p></td>
+                <td><p class="ccddd" title="科目未与预算相对应">科目未与预算相对应</p></td>
+                <td><p class="ccddd" title="决算草案的科目未与预算相对应；项目绩效目标经评估未完成或量化指标完成率低于80%">决算草案的科目未与预算相对应；项目绩效目标经评估未完成或量化指标完成率低于80%</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>4</td>
+                <td><p class="ccddd" title="备选类">备选类</p></td>
+                <td><p class="ccddd" title="三公经费和会议费超进度">三公经费和会议费超进度</p></td>
+                <td><p class="ccddd" title="三公经费和会议费超进度（分支出类型），三公经费和会议费超进度（分支出类型）超预算10%-20%为三级预警，三公经费和会议费超进度（分支出类型）20%以上为二级预警。">三公经费和会议费超进度（分支出类型），三公经费和会议费超进度（分支出类型）超预算10%-20%为三级预警，三公经费和会议费超进度（分支出类型）20%以上为二级预警。</p></td>
+               
+             </tr> 
+             <tr class="feedback_ck" >
+                <td>5</td>
+                <td><p class="ccddd" title="备选类">备选类</p></td>
+                <td><p class="ccddd" title="项目资金执行率偏低">项目资金执行率偏低</p></td>
+                <td><p class="ccddd" title="项目资金执行率偏低为二级预警。">项目资金执行率偏低为二级预警。</p></td>
+               
+             </tr> 
+            </table>
+            <div class="reg_infor_page">
+              <div class="pagesboxright">
+                <a href="#" class="pageradius">首页</a>
+                <a href="#" class="pageradius">上一页</a>
+                
+                
+                <a href="#" class="pageradius">1</a>
+                <a href="#" class="pageradius active">2</a>
+                <a href="#" class="pageradius">3</a>
+                ...
+                <a href="#" class="pageradius">8</a>
+                <a href="#" class="pageradius">9</a>
+                
+                
+                <a href="#" class="pageradius">下一页</a>
+                <a href="#" class="pageradius">尾页</a>
+                <input name="" value="11" class="pageradius" />
+                
+                <a href="#" class="pageradius">跳转</a>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="xianshikongbai">
+        
+      </div>
+    </div> 
+  </div>
+
+    
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!--范围-->
+    <script type="text/javascript" src="js/ion.rangeSlider.js"></script> 
+    
+  <script type="text/javascript" src="js/web.js"></script>
+  
+  <script src="js/echarts.min.js"></script>
+  
+
+   
+
+
+    <script src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="yujing.js"></script>
+  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+     <!--------echarts 数据开始---------->
+ <script>
+// 路径配置
+require.config({
+　　paths: {
+　　　　echarts: 'http://echarts.baidu.com/build/dist'
+　　}
+});
+// 使用
+require(
+　　　　　　[
+　　　　　　　　'echarts',
+　　　　　　　　'echarts/chart/bar',
+　　　　　　　　'echarts/chart/line',
+        'echarts/chart/pie'
+　　　　　　],
+　　　　　　drawEcharts
+);
+ 
+function drawEcharts(ec){
+　　drawPie(ec);
+  //drawBar(ec);
+}
+function drawBar(ec){
+  
+  var bar1 = ec.init(document.getElementById('bar-1'));
+    option2 = {
+        tooltip : {
+        trigger: 'axis'
+      },
+    legend: {
+        data:['红色预警','黄色预警'],
+          x: 'center', // 'center' | 'left' | {number},
+        y: '360', // 'center' | 'bottom' | {number},
+
+    },
+   grid:{
+        x:50,
+        y:20,
+        x2:30,
+        y2:80,
+     show : true,
+        borderWidth:1
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['连续三年执行率较低未做调整异常','三公经费','超预算或无预算安排支出','总预算支出进度缓慢','项目经费执行进度异常','三公经费和会议费超预算','政府采购收款单位不在指定供应商目录','预算调整幅度过高','预备费预警','预算周转金预警','收入、支出与预算及预算执行情况进度异常','三公经费”超预算','政府采购：超申报数'],
+           axisLabel: {
+                show:true,
+                interval: 0, //强制所有标签显示
+                align:'left',
+                margin: 0, //标签向右移动 如果yAxis 跟 xAxis换了,这个margin应该调为0才能看见标签显示
+                textStyle: {
+                    color: "#000",
+                },
+                formatter: function (params){   //标签输出形式 ---请开始你的表演
+                    var index = 8;
+                    var newstr = '';
+                    for(var i=0;i<params.length;i+=index){
+                        var tmp=params.substring(i, i+index);
+                        newstr+=tmp+'\n';
+                    }
+                    if( newstr.length > 6)
+                        return '\n'+newstr.substring(0,6) + '...';
+                    else
+                        return '\n'+newstr;
+                },
+            },
+            triggerEvent: true,
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+         {
+            name:'黄色预警',
+            type:'bar',
+             barWidth :18,
+              itemStyle: {
+        normal: {
+          color: "#EFAF58",
+          
+        }
+      },
+            data:[10, 6, 8, 26, 28, 70, 178, 180, 48, 18, 6, 10,18],
+          
+        },
+        {
+            name:'红色预警',
+            type:'bar',
+              barWidth :18,
+           itemStyle: {
+        normal: {
+          color: "#F46665",
+          
+        }
+      },
+
+            data:[9, 5, 9, 21, 25, 75, 135, 167, 71, 21, 95, 3,21],
+           
+        },
+     
+    ]
+    };
+    bar1.setOption(option2);
+ var ecConfig = require('echarts/config');
+    bar1.on(ecConfig.EVENT.CLICK, function (params) {    //鼠标经过图表时候判断参数  ---请开始你的表演
+      
+       //console.log(params);
+        if( params.componentType == 'xAxis' ){
+            var tt = $('#tip');
+            tt.html(params.value);
+            console.log('x='+params.event.event.layerX+'  ---'+'y='+params.event.event.layerY)
+            tt.css('left', params.event.event.layerX+10);
+            tt.css('top', params.event.event.layerY+20);
+            console.log(tt.css('left'));
+            tt.removeClass('hide');
+        }
+    });
+    bar1.on(ecConfig.EVENT.mouseout, function (params) {
+        tt.addClass('hide');
+    })
+   
+  //　function eConsole(param) {
+    //window.location.href='schedule_fl.html';
+  　　//　alert(param.value+'-----'+param.name); 
+    
+  //　}
+  //　ass_myChart1.on(ecConfig.EVENT.CLICK, eConsole);
+    
+    
+    
+    
+//  第二个ech
+  var bar2 = ec.init(document.getElementById('superv_ech_2'));
+ option_2 = {
+      tooltip : {
+        trigger: 'axis'
+      },
+    legend: {
+        data:['红色预警','黄色预警'],
+          x: 'center', // 'center' | 'left' | {number},
+        y: '360', // 'center' | 'bottom' | {number},
+
+    },
+   grid:{
+        x:50,
+        y:20,
+        x2:30,
+        y2:80,
+     show : true,
+        borderWidth:1
+    },
+
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['民防办公室','民防指挥信息','民防工程管理','民防特种救援中心','体育局','体育场','社会体育管理中心','体育产业发展中心','青少年体育运动学校','体育馆'],
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+         
+        {
+            name:'红色预警',
+            type:'bar',
+            stack: '总量',
+              barWidth :18,
+           itemStyle: {
+        normal: {
+          color: "#F46665",
+          
+        }
+      },
+
+            data:[8, 5, 12, 22, 25, 76,  20, 6, 3,20],
+           
+        },{
+            name:'黄色预警',
+            type:'bar',
+            stack: '总量',
+             barWidth :18,
+              itemStyle: {
+        normal: {
+          color: "#EFAF58",
+          
+        }
+      },
+            data:[10, 6, 9, 26, 28,  48, 18, 6, 10,18],
+          
+        },
+     
+    ]
+    };
+   bar2.setOption(option_2);   
+  
+  
+}
+
+function drawPie(ec){
+  
+var ass_myChart1 = ec.init(document.getElementById('superv_ech_3'));
+ass_option1 = {
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'right',
+        y :'center',
+        textStyle : {fontSize : '18',fontFamily : '微软雅黑',},
+       itemGap:20,
+       data:['警示指标','提示指标','备选指标']
+    },
+
+    calculable : false,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+             center : ['45%', '50%'],
+            selectedMode: 'single',
+            radius : [100, 140],
+            
+            // for funnel
+            x: '20%',
+            width: '40%',
+            funnelAlign: 'right',
+            max: 1548,
+             itemStyle : {
+                normal : {
+           color: function(params) {
+                        var colorList = [
+                      
+                           '#F58250','#21B696','#2384CA',
+                        ];
+                        return colorList[params.dataIndex]
+                    }
+                }
+            },
+            data:[
+        {value:335, name:'警示指标',itemStyle : {
+           normal : {
+             label : {
+             
+             show : true,
+               formatter: "  \n 数量：{c} \n 占比： {d}%",
+               textStyle : {
+                            fontSize : '18',
+                            fontFamily : '微软雅黑',
+                          
+                       },
+             },
+             labelLine : {show : true}
+           },
+         },},
+               {value:302, name:'提示指标',
+               //selected:true,
+               itemStyle : {
+           normal : {
+             label : {
+             
+             show : true,
+               formatter: "  \n 数量：{c} \n 占比： {d}%",
+               textStyle : {
+                            fontSize : '18',
+                            fontFamily : '微软雅黑',
+                          
+                       },
+             
+             },
+             labelLine : {show : true}
+           },
+         },},
+  			 {value:360, name:'备选指标',itemStyle : {
+           normal : {
+             label : {
+             
+             show : true,
+               formatter: "  \n 数量：{c} \n 占比： {d}%",
+               textStyle : {
+                            fontSize : '18',
+                            fontFamily : '微软雅黑',
+                          
+                       },
+             
+             
+             },
+             labelLine : {show : true}
+           },
+         },},
+          
+            ]
+        },
+       
+    ]
+};
+
+ass_myChart1.setOption(ass_option1);
+  
+  var ecConfig = require('echarts/config');
+  　function eConsole(param) {
+    //window.location.href='schedule_fl.html';
+  　　　//alert(param.value+'-----'+param.name); 
+      if(param.name == "警示指标"){
+        $(".yujing").show().siblings(".supervTable").hide();
+      }else if(param.name == "提示指标"){
+        $(".tishi").show().siblings(".supervTable").hide();
+      }else if(param.name == "备选指标"){
+        $(".beixuan").show().siblings(".supervTable").hide();
+      }
+//    var tableName = $(".supervTable").attr("name");
+//    if(param.name == tableName){
+//      param.name = tableName;
+//      $(".supervTable").attr(param.name).show().siblings(".supervTable").hide().hasattr;
+//    }
+  　}
+  　ass_myChart1.on(ecConfig.EVENT.CLICK, eConsole);
+}
+
+  $(".supervTable:not(:first)").hide();
+  
+
+  </script> 
+  
+  
+  
+ <script>$("#leftNav_2").addClass("active");</script>	
+</body>
+
+
+<!-- Mirrored from www.jq22.com/demo/web20160509/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Jun 2016 07:42:38 GMT -->
+</html>
